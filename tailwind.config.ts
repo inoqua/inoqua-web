@@ -28,6 +28,7 @@ const config: Config = {
         // Títulos y subtítulos bajados 10px respecto al valor original de Figma
         "titulo-xxl": ["26px", { lineHeight: "36px", fontWeight: "700" }], // Titulo XXL (40 -> 30 -> 26, todos los componentes salvo los hero)
         "titulo-xxl-hero": ["30px", { lineHeight: "42px", fontWeight: "700" }], // Titulo XXL de los componentes hero (Home, Servicio, Contacto)
+        "titulo-xxl-hero-sm": ["28px", { lineHeight: "38px", fontWeight: "700" }], // Versión mobile del título hero (< sm)
         "subtitulo-35": ["25px", { lineHeight: "36px", fontWeight: "700" }], // Subtitulo35 (35 -> 25)
         "subtitulo-xxl": ["16px", { lineHeight: "26px", fontWeight: "500" }], // Subtitulo XXL (24 -> 16, mínimo legible)
         "parrafo-20": ["18px", { lineHeight: "29px", fontWeight: "500" }], // Parrafo 20 (20 -> 18)

@@ -10,7 +10,11 @@ type HowWeWorkProps = {
   steps: Step[];
 };
 
-function StepCard({ step, isLast }: { step: Step; isLast: boolean }) {
+function StepCard({ step, index, total }: { step: Step; index: number; total: number }) {
+  const isLast = index === total - 1;
+  // En mobile/tablet el grid es de 2 columnas: solo hace falta flecha después del 1er y 3er paso (1→2, 3→4).
+  const showCompactArrow = !isLast && index % 2 === 0;
+
   return (
     <div className="relative flex flex-col items-center text-center">
       <div className="flex h-[273px] w-full flex-col items-center rounded-card p-6">
@@ -23,9 +27,7 @@ function StepCard({ step, isLast }: { step: Step; isLast: boolean }) {
 
       {!isLast && (
         <svg
-          className="absolute -right-8 top-13.75 hidden -translate-y-1/2 lg:block"
-          width="60"
-          height="16"
+          className={`absolute -right-8 top-13.75 h-4 w-15 -translate-y-1/2 ${showCompactArrow ? "block" : "hidden"} md:block`}
           viewBox="0 0 60 16"
           fill="none"
         >
@@ -54,10 +56,10 @@ export default function HowWeWork({ eyebrow, title, subtitle, closingText, steps
           <p className="mt-3 text-subtitulo-xxl text-white">{subtitle}</p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="mt-16 grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-6">
           {steps.map((step, i) => (
             <Reveal key={step.number} delay={i * 120}>
-              <StepCard step={step} isLast={i === steps.length - 1} />
+              <StepCard step={step} index={i} total={steps.length} />
             </Reveal>
           ))}
         </div>

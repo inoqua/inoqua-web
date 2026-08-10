@@ -67,7 +67,7 @@ export default function ContactHero({ title, subtitle, cards }: ContactHeroProps
       </Parallax>
 
       <Reveal className="relative mx-auto flex w-full max-w-6xl flex-col items-center rounded-final bg-white/85 px-10 py-14 text-center shadow-lg backdrop-blur-sm">
-        <h1 className="text-titulo-xxl-hero text-azul">{title}</h1>
+        <h1 className="text-titulo-xxl-hero-sm sm:text-titulo-xxl-hero text-azul">{title}</h1>
         <p className="mx-auto mt-5 max-w-xl text-subtitulo-xxl text-texto">{subtitle}</p>
 
         <div className="mt-12 flex w-full flex-wrap justify-center gap-3">
