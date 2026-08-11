@@ -31,7 +31,7 @@ export default function ProcessChecklist({ title, subtitle, imageLabel, items, b
             ))}
           </ul>
 
-          <div className="mt-6">
+          <div className="mt-6 lg:w-100">
             <Button label={button.label} href={button.href} variant="solid" />
           </div>
         </Reveal>
