@@ -40,7 +40,7 @@ export default function FinalCTA({
       <div className="absolute inset-0 bg-azul/20" />
 
       <Reveal className="relative mx-auto flex w-full max-w-4xl flex-col items-center rounded-final bg-white/85 px-10 py-14 text-center shadow-lg backdrop-blur-sm">
-        <h2 className="mx-auto text-titulo-xxl text-[#282828]" style={{ maxWidth: titleMaxWidth }}>
+        <h2 className="mx-auto md:text-titulo-xxl text-title-cta-sm text-[#282828]" style={{ maxWidth: titleMaxWidth }}>
           {title}
         </h2>
         <p className="mt-6 lg:max-w-xl text-[18px] leading-[32px] text-black">

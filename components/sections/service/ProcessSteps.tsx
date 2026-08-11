@@ -17,7 +17,12 @@ const LG_COLS_BY_STEP_COUNT: Record<number, string> = {
   5: "lg:grid-cols-5",
 };
 
-function StepCard({ step, isLast }: { step: Step; isLast: boolean }) {
+function StepCard({ step, index, total, smCols }: { step: Step; index: number; total: number; smCols: number }) {
+  const isLast = index === total - 1;
+  // Debajo de lg el grid envuelve en filas: solo mostramos flecha si el siguiente paso cae en la misma fila.
+  const showArrowMobile = !isLast && index % 2 !== 1;
+  const showArrowTablet = !isLast && index % smCols !== smCols - 1;
+
   return (
     <div className="relative flex flex-col items-center text-center">
       <div className="flex h-[273px] w-full flex-col items-center rounded-card p-6">
@@ -30,9 +35,9 @@ function StepCard({ step, isLast }: { step: Step; isLast: boolean }) {
 
       {!isLast && (
         <svg
-          className="absolute -right-8 top-13.75 hidden -translate-y-1/2 lg:block"
-          width="60"
-          height="16"
+          className={`absolute -right-8 top-13.75 h-4 w-15 -translate-y-1/2 ${showArrowMobile ? "block" : "hidden"} ${
+            showArrowTablet ? "sm:block" : "sm:hidden"
+          } lg:block`}
           viewBox="0 0 60 16"
           fill="none"
         >
@@ -55,6 +60,9 @@ function StepCard({ step, isLast }: { step: Step; isLast: boolean }) {
  * Soporta cualquier cantidad de pasos (a diferencia de HowWeWork de Home, que es fijo a 4).
  */
 export default function ProcessSteps({ eyebrow, title, subtitle, steps,subTitleMaxWidth, closingText }: ProcessStepsProps) {
+  // A partir de 5 pasos, en tablet se muestran de a 3 columnas en vez de 2.
+  const smCols = steps.length === 5 ? 3 : 2;
+
   return (
     <section className="bg-azul py-17">
       <div className="mx-auto max-w-content px-6 sm:px-10 lg:px-20">
@@ -67,13 +75,13 @@ export default function ProcessSteps({ eyebrow, title, subtitle, steps,subTitleM
         </Reveal>
 
         <div
-          className={`mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-6 ${
+          className={`mt-16 grid grid-cols-2 gap-2 ${smCols === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"} lg:gap-6 ${
             LG_COLS_BY_STEP_COUNT[steps.length] ?? "lg:grid-cols-5"
           }`}
         >
           {steps.map((step, i) => (
             <Reveal key={step.number} delay={i * 100}>
-              <StepCard step={step} isLast={i === steps.length - 1} />
+              <StepCard step={step} index={i} total={steps.length} smCols={smCols} />
             </Reveal>
           ))}
         </div>

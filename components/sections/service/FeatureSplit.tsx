@@ -30,7 +30,7 @@ export default function FeatureSplit({
     <section className="py-17">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:px-20">
         <Reveal className={textOrderClass}>
-          <h2 className="text-subtitulo-35 text-azul lg:w-100">{title}</h2>
+          <h2 className="text-subtitulo-35-sm sm:text-subtitulo-35 text-azul lg:w-100">{title}</h2>
           <p className="mt-4 text-[16px] font-semibold lg:w-100 leading-6.5 text-texto">{subtitle}</p>
 
           {items && items.length > 0 && (

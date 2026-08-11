@@ -18,7 +18,7 @@ export default function AudienceCards({ title, subtitle, cards }: AudienceCardsP
         <p className="mt-3 text-subtitulo-xxl text-texto">{subtitle}</p>
       </Reveal>
 
-      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid  gap-6 grid-cols-2 lg:grid-cols-4">
         {cards.map((card, i) => (
           <Reveal key={card.text} delay={i * 100}>
             <div className="flex h-[190px] flex-col items-center gap-4 rounded-card bg-azul p-5 pt-8 text-center transition-transform duration-300 hover:-translate-y-1">

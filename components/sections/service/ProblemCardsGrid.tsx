@@ -17,7 +17,7 @@ export default function ProblemCardsGrid({ title, subtitle, cards }: ProblemCard
   return (
     <section className="mx-auto max-w-content px-4 pt-6 pb-5 sm:px-10 lg:px-20">
       <Reveal>
-        <h2 className="mx-auto max-w-xl text-subtitulo-35 text-azul text-center">{title}</h2>
+        <h2 className="mx-auto max-w-xl text-subtitulo-35-sm sm:text-subtitulo-35 text-azul text-center">{title}</h2>
         <p className="mt-10 text-subtitulo-xxl text-texto">{subtitle}</p>
       </Reveal>
 

@@ -37,7 +37,7 @@ export default function CertificationCards({ title, subtitle, cards }: Certifica
               <span className="mt-3 flex min-h-10 items-center justify-center rounded-full bg-naranja px-4 py-1 text-center text-[12px] font-medium leading-4 text-azul">
                 {card.tag}
               </span>
-              <p className="mt-4 min-h-25  lg:min-h-25 xl:min-h-20 text-[16px] leading-[22px] text-texto">{card.description}</p>
+              <p className="mt-4 lg:min-h-25 xl:min-h-20 text-[16px] leading-[22px] text-texto">{card.description}</p>
               <ul className="mt-5 flex w-full flex-col items-start gap-2">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-left text-[15px] text-texto">

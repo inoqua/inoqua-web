@@ -19,7 +19,7 @@ export default function ProblemCriticalPoints({ title, cards, criticalPoints }: 
   return (
     <section className="mx-auto max-w-content px-6 pt-6 pb-5 sm:px-10 lg:px-20">
       <Reveal>
-        <h2 className="mx-auto max-w-xl text-subtitulo-35 text-azul text-center">{title}</h2>
+        <h2 className="mx-auto max-w-xl text-subtitulo-35-sm sm:text-subtitulo-35 text-azul text-center">{title}</h2>
       </Reveal>
 
       <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-stretch">

@@ -24,10 +24,10 @@ export default function DifferentiatorCards({ eyebrow, title, cards, quote }: Di
           <h2 className="mt-2 text-titulo-xxl text-azul">{title}</h2>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:auto-rows-fr">
           {cards.map((card, i) => (
-            <Reveal key={card.title} delay={i * 100}>
-              <div className="flex h-[130px] items-start gap-5 rounded-panel border-2 border-azul/10 bg-white p-6 transition-transform duration-300 hover:-translate-y-1">
+            <Reveal key={card.title} delay={i * 100} className="lg:h-full">
+              <div className="flex lg:h-full items-start gap-5 rounded-panel border-2 border-azul/10 bg-white p-6 transition-transform duration-300 hover:-translate-y-1">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-azul/10 text-azul">
                   <Icon name={card.icon} className="h-7 w-7" />
                 </div>
