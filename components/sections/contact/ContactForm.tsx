@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 
 type ContactFormProps = {
@@ -11,6 +12,113 @@ type ContactFormProps = {
 };
 
 const situaciones = ["Idea de negocio", "En proceso", "Funcionando"];
+
+const tiposNegocio = [
+  "Locales gastronómicos con cocina",
+  "Emprendimientos sin elaboración",
+  "Supermercado o Autoservicio",
+  "Comercio minorista",
+  "Depósito, logística o importación",
+  "Fábrica, industria o catering",
+  "Plazas de comidas o cocinas comunitarias",
+  "Ferias o eventos gastronómicos",
+  "Alimentos para animales",
+  "Otros",
+];
+
+// Solo estas dos categorías habilitan un segundo desplegable con subrubros.
+// El resto se envía únicamente con la categoría principal.
+const subtiposPorNegocio: Record<string, string[]> = {
+  "Locales gastronómicos con cocina": [
+    "Panadería",
+    "Rotisería",
+    "Restaurante",
+    "Confitería",
+    "Fábrica de pastas",
+    "Pizzería",
+    "Salón de fiesta",
+    "Comida al paso/ minutas",
+    "Fiambrería",
+    "Cantina con elaboración",
+    "Pescadería",
+    "Parrillada",
+    "Salón de té",
+    "Heladería",
+    "Elaboración de sandwiches",
+    "Venta de fiambres",
+    "Otros",
+  ],
+  "Emprendimientos sin elaboración": ["Kiosco", "Almacén", "Venta de productos envasados", "Frutería/verdulería", "Otros"],
+};
+
+const subtipoPlaceholderPorNegocio: Record<string, string> = {
+  "Locales gastronómicos con cocina": "Selecciona tu local gastronómico",
+  "Emprendimientos sin elaboración": "Selecciona tu tipo de emprendimiento",
+};
+
+type DropdownProps = {
+  value: string;
+  placeholder: string;
+  options: string[];
+  onChange: (value: string) => void;
+  error?: boolean;
+};
+
+function Dropdown({ value, placeholder, options, onChange, error }: DropdownProps) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div ref={containerRef} className="relative">
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+        className={`flex w-full items-center justify-between rounded-xl border-2 bg-white px-4 py-3 text-left text-[16px] outline-none transition-colors ${
+          error ? "border-red-500 focus:border-red-500" : "border-azul focus:border-naranja"
+        }`}
+      >
+        <span className={value ? "text-azul" : "text-[#6e6e6e]"}>{value || placeholder}</span>
+        <ChevronDown className={`h-5 w-5 shrink-0 text-azul transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && (
+        <ul
+          role="listbox"
+          className="absolute z-10 mt-2 max-h-72 w-full overflow-y-auto rounded-xl border-2 border-azul bg-white py-2 shadow-lg"
+        >
+          {options.map((option) => (
+            <li key={option} role="option" aria-selected={option === value}>
+              <button
+                type="button"
+                onClick={() => {
+                  onChange(option);
+                  setOpen(false);
+                }}
+                className={`block w-full px-4 py-2 text-left text-[16px] transition-colors hover:bg-azul/[0.06] ${
+                  option === value ? "font-semibold text-azul" : "text-texto"
+                }`}
+              >
+                {option}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 
 /**
  * Formulario de "Solicitá la evaluación técnica de tu negocio". Es un componente
@@ -27,16 +135,57 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
     telefono: "",
     correo: "",
     negocio: "",
+    subNegocio: "",
     situacion: situaciones[0],
     comentarios: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{
+    nombre?: string;
+    telefono?: string;
+    correo?: string;
+    negocio?: string;
+    subNegocio?: string;
+    comentarios?: string;
+  }>({});
 
   const inputClass =
     "w-full rounded-xl border-2 border-azul bg-white px-4 py-3 text-[16px] text-azul placeholder:text-[#6e6e6e] outline-none transition-colors focus:border-naranja";
+  const errorInputClass = "border-red-500 focus:border-red-500";
+
+  const validate = () => {
+    const nextErrors: typeof errors = {};
+
+    if (form.nombre.trim().split(/\s+/).filter(Boolean).length < 2) {
+      nextErrors.nombre = "Por favor indicanos tu nombre y apellido.";
+    }
+
+    if (!/^09\d{7}$/.test(form.telefono.replace(/\D/g, ""))) {
+      nextErrors.telefono = "Por favor indicá un teléfono celular de 9 dígitos.";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.correo.trim())) {
+      nextErrors.correo = "Por favor indicá un email con @ y .com.";
+    }
+
+    if (!form.negocio) {
+      nextErrors.negocio = "Por favor seleccioná el tipo de negocio.";
+    } else if (subtiposPorNegocio[form.negocio] && !form.subNegocio) {
+      nextErrors.subNegocio = "Por favor seleccioná una opción.";
+    }
+
+    if (!form.comentarios.trim()) {
+      nextErrors.comentarios = "Por favor contanos cómo podemos ayudarte.";
+    }
+
+    return nextErrors;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const nextErrors = validate();
+    setErrors(nextErrors);
+    if (Object.keys(nextErrors).length > 0) return;
     // TODO: conectar a un endpoint real (ver nota arriba).
     setSubmitted(true);
   };
@@ -62,55 +211,83 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
               <div>
                 <label className="mb-1.5 block text-[18px] font-medium text-azul">Nombre *</label>
                 <input
-                  required
                   type="text"
                   placeholder="Tu nombre y apellido"
-                  className={inputClass}
+                  className={`${inputClass} ${errors.nombre ? errorInputClass : ""}`}
                   value={form.nombre}
-                  onChange={(e) => setForm({ ...form, nombre: e.target.value })}
+                  onChange={(e) => {
+                    setForm({ ...form, nombre: e.target.value });
+                    if (errors.nombre) setErrors({ ...errors, nombre: undefined });
+                  }}
                 />
+                {errors.nombre && <p className="mt-1.5 text-[14px] text-red-600">{errors.nombre}</p>}
               </div>
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
                   <label className="mb-1.5 block text-[18px] font-medium text-azul">Teléfono *</label>
                   <input
-                    required
                     type="tel"
                     placeholder="Teléfono de contacto"
-                    className={inputClass}
+                    className={`${inputClass} ${errors.telefono ? errorInputClass : ""}`}
                     value={form.telefono}
-                    onChange={(e) => setForm({ ...form, telefono: e.target.value })}
+                    onChange={(e) => {
+                      setForm({ ...form, telefono: e.target.value });
+                      if (errors.telefono) setErrors({ ...errors, telefono: undefined });
+                    }}
                   />
+                  {errors.telefono && <p className="mt-1.5 text-[14px] text-red-600">{errors.telefono}</p>}
                 </div>
                 <div>
                   <label className="mb-1.5 block text-[18px] font-medium text-azul">Correo electrónico *</label>
                   <input
-                    required
-                    type="email"
+                    type="text"
                     placeholder="Correo electrónico"
-                    className={inputClass}
+                    className={`${inputClass} ${errors.correo ? errorInputClass : ""}`}
                     value={form.correo}
-                    onChange={(e) => setForm({ ...form, correo: e.target.value })}
+                    onChange={(e) => {
+                      setForm({ ...form, correo: e.target.value });
+                      if (errors.correo) setErrors({ ...errors, correo: undefined });
+                    }}
                   />
+                  {errors.correo && <p className="mt-1.5 text-[14px] text-red-600">{errors.correo}</p>}
                 </div>
               </div>
 
               <div>
                 <label className="mb-1.5 block text-[18px] font-medium text-azul">¿Qué tipo de negocio tenés? *</label>
-                <input
-                  required
-                  type="text"
+                <Dropdown
                   placeholder="Selecciona la categoría de tu negocio"
-                  className={inputClass}
+                  options={tiposNegocio}
                   value={form.negocio}
-                  onChange={(e) => setForm({ ...form, negocio: e.target.value })}
+                  error={!!errors.negocio}
+                  onChange={(value) => {
+                    setForm({ ...form, negocio: value, subNegocio: "" });
+                    if (errors.negocio || errors.subNegocio) setErrors({ ...errors, negocio: undefined, subNegocio: undefined });
+                  }}
                 />
+                {errors.negocio && <p className="mt-1.5 text-[14px] text-red-600">{errors.negocio}</p>}
               </div>
+
+              {subtiposPorNegocio[form.negocio] && (
+                <div>
+                  <Dropdown
+                    placeholder={subtipoPlaceholderPorNegocio[form.negocio]}
+                    options={subtiposPorNegocio[form.negocio]}
+                    value={form.subNegocio}
+                    error={!!errors.subNegocio}
+                    onChange={(value) => {
+                      setForm({ ...form, subNegocio: value });
+                      if (errors.subNegocio) setErrors({ ...errors, subNegocio: undefined });
+                    }}
+                  />
+                  {errors.subNegocio && <p className="mt-1.5 text-[14px] text-red-600">{errors.subNegocio}</p>}
+                </div>
+              )}
 
               <div>
                 <label className="mb-2 block text-[18px] font-medium text-azul">
@@ -136,13 +313,16 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
               <div>
                 <label className="mb-1.5 block text-[18px] font-medium text-azul">¿Cómo podemos ayudarte? *</label>
                 <textarea
-                  required
                   rows={4}
                   placeholder="Contanos tus ideas"
-                  className={`${inputClass} resize-none`}
+                  className={`${inputClass} resize-none ${errors.comentarios ? errorInputClass : ""}`}
                   value={form.comentarios}
-                  onChange={(e) => setForm({ ...form, comentarios: e.target.value })}
+                  onChange={(e) => {
+                    setForm({ ...form, comentarios: e.target.value });
+                    if (errors.comentarios) setErrors({ ...errors, comentarios: undefined });
+                  }}
                 />
+                {errors.comentarios && <p className="mt-1.5 text-[14px] text-red-600">{errors.comentarios}</p>}
               </div>
 
               <button
