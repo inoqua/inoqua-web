@@ -268,3 +268,4 @@ Pendiente si querés seguir iterando:
   landings comparten la misma foto).
 - Conectar `ContactForm` a un backend real (hoy solo valida y muestra un mensaje de confirmación).
 - Revisar/ajustar textos puntuales página por página si algo no refleja 100% tu negocio real.
+Prueba tras migración
