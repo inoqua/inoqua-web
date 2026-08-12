@@ -15,7 +15,12 @@ const contactInfo = {
   phone: "+598 99 286 804",
   phoneHref: "tel:+59899286804",
   email: "info@inoqua.com.uy",
-  location: "Montevideo, Uruguay",
+  email2: "registros@inoqua.com.uy",
+  locationLine1: "Misiones 1379 / 603",
+  locationLine2: "Montevideo, Uruguay",
+  mapsHref:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent("Misiones 1379 / 603, Montevideo, Uruguay"),
 };
 
 export default function Footer() {
@@ -95,22 +100,52 @@ export default function Footer() {
                   {contactInfo.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <li className="flex items-start gap-3">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="mt-0.5 shrink-0"
+                >
                   <path d="M4 4h16v16H4V4Z" opacity="0" />
                   <path d="M22 6 12 13 2 6" />
                   <path d="M2 6h20v12H2V6Z" />
                 </svg>
-                <a href={`mailto:${contactInfo.email}`} className="text-[16px] text-white/90 hover:text-naranja">
-                  {contactInfo.email}
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href={`mailto:${contactInfo.email}`} className="text-[16px] text-white/90 hover:text-naranja">
+                    {contactInfo.email}
+                  </a>
+                  <a href={`mailto:${contactInfo.email2}`} className="text-[16px] text-white/90 hover:text-naranja">
+                    {contactInfo.email2}
+                  </a>
+                </div>
               </li>
-              <li className="flex items-center gap-3">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <li className="flex items-start gap-3">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="mt-0.5 shrink-0"
+                >
                   <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0Z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span className="text-[16px] text-white/90">{contactInfo.location}</span>
+                <a
+                  href={contactInfo.mapsHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[16px] text-white/90 hover:text-naranja"
+                >
+                  {contactInfo.locationLine1}
+                  <br />
+                  {contactInfo.locationLine2}
+                </a>
               </li>
             </ul>
           </div>
