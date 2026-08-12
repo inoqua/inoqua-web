@@ -12,7 +12,6 @@ import {
   aboutFinalCtaContent,
 } from "@/content/nosotros";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = buildMetadata({
   title: "Nosotros",
@@ -25,9 +24,7 @@ export const metadata = buildMetadata({
 export default function NosotrosPage() {
   return (
     <main>
-      <BreadcrumbJsonLd items={[{ name: "Inicio", path: "/" }, { name: "Nosotros", path: "/nosotros" }]} />
-      {/* FinalCTA se reutiliza como hero: misma estructura (foto + tarjeta + CTAs) que en Figma */}
-      <FinalCTA {...aboutHeroContent} />
+      <FinalCTA {...aboutHeroContent} ctaContainerClassName="[&>a:last-child]:hidden min-[500px]:[&>a:last-child]:inline-flex" />
       <AboutIntro {...aboutIntroContent} />
       <WhyChooseUs {...whyChooseUsContent} />
       <HowWeWork {...aboutHowWeWorkContent} />

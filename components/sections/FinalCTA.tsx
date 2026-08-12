@@ -12,6 +12,8 @@ type FinalCTAProps = {
   button: CTAButton;
   /** Botón secundario opcional — permite reutilizar este banner como hero (ej: Nosotros). */
   secondaryButton?: CTAButton;
+  /** Clases extra para el contenedor de los CTAs (ej: ocultar el secundario en mobile muy chico). */
+  ctaContainerClassName?: string;
   /** Foto de fondo — por defecto la genérica de Home. Cada landing puede pasar la suya. */
   image?: string;
   /** Ancho máximo del título — por defecto 42rem. Cada landing puede angostarlo/ampliarlo. */
@@ -29,6 +31,7 @@ export default function FinalCTA({
   subtitleBold,
   button,
   secondaryButton,
+  ctaContainerClassName = "",
   image = "/img/home1.jpg",
   titleMaxWidth = "42rem",
 }: FinalCTAProps) {
@@ -47,7 +50,7 @@ export default function FinalCTA({
           {subtitleRegular}</p>
         <p className="text-[18px] leading-[32px] text-black font-semibold">{subtitleBold}</p>
         
-        <div className="mt-8 flex flex-nowrap justify-center gap-3">
+        <div className={`mt-8 flex flex-nowrap justify-center gap-3 ${ctaContainerClassName}`}>
           <Button label={button.label} href={button.href} variant={button.variant ?? "solid"} />
           {secondaryButton && (
             <Button

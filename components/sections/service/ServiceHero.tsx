@@ -26,7 +26,7 @@ export default function ServiceHero({
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-6 pt-8 pb-10 sm:px-10 lg:grid-cols-2 lg:gap-8 lg:px-20 lg:pt-10 lg:pb-20">
-        <div className=" mt-12 lg:mt-3 animate-fadeUp">
+        <div className=" mt-5 lg:mt-3 animate-fadeUp">
           <span className="text-[10px]  font-medium uppercase tracking-[1.2px] text-naranja">
             {breadcrumb}
           </span>

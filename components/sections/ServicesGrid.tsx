@@ -14,13 +14,13 @@ export function ServiceCard({ icon, title, text, href }: ServiceCardProps) {
   return (
     <Link
       href={href}
-      className="group flex h-65 sm:h-70 lg:h-82 xl:h-75 w-full flex-col rounded-card bg-azul p-7 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+      className="group flex h-70 lg:h-82 xl:h-75 w-full flex-col rounded-card bg-azul p-7 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
     >
       {/* Acento de color en vez del ícono de Figma — reemplazá por tu ícono real si querés */}
       <Icon name={icon} className="h-10 w-10 shrink-0 text-naranja" />
       <h3 className="mt-6 min-h-13 text-card-titulo text-white">{title}</h3>
       <p className="mt-0 min-h-5 sm:min-h-14 md:min-h-12 lg:min-h-15 lg:mt-4 text-card-txt text-white/90">{text}</p>
-      <span className="mt-8 lg:mt-auto flex items-center gap-2 text-sm text-white transition-transform duration-200 group-hover:translate-x-1">
+      <span className="mt-10 sm:mt-8 lg:mt-auto flex items-center gap-2 text-sm text-white transition-transform duration-200 group-hover:translate-x-1">
         Ver más
         <Icon name="arrowRight" className="h-4 w-4 text-naranja" />
       </span>

@@ -38,7 +38,7 @@ export default function CertificationCards({ title, subtitle, cards }: Certifica
                 {card.tag}
               </span>
               <p className="mt-4 lg:min-h-25 xl:min-h-20 text-[16px] leading-[22px] text-texto">{card.description}</p>
-              <ul className="mt-5 flex w-full flex-col items-start gap-2">
+              <ul className="mt-10 md:mt-5 flex w-full flex-col items-start gap-2">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-left text-[15px] text-texto">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className=" mt-0.5 shrink-0 text-naranja">

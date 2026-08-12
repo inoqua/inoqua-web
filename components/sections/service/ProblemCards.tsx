@@ -41,7 +41,7 @@ export default function ProblemCards({
           const centerLastOdd = isOddCount && isLast ? "max-sm:col-span-2 max-sm:mx-auto max-sm:max-w-[calc(50%-0.5rem)]" : "";
           return (
             <Reveal key={card.text} delay={i * 80} className={`${centerLastRow} ${centerLastOdd}`}>
-              <div className="flex h-47.5 flex-col items-center gap-4 rounded-card bg-azul p-5 pt-8 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div className="flex h-58 sm:h-47 lg:h-53 flex-col items-center gap-4 rounded-card bg-azul p-5 pt-8 text-center transition-transform duration-300 hover:-translate-y-1">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center">
                   <Icon name={card.icon} className="h-9 w-9 text-naranja" />
                 </div>

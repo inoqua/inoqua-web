@@ -67,7 +67,7 @@ export default function PricingCards({ title, subtitle, plans }: PricingCardsPro
               </ul>
 
               {plan.note && (
-                <p className={`mt-12 xl:mt-8 min-h-19.5 border-t pt-3 text-[15px] leading-5.5 ${plan.highlighted ? "border-white/20 text-white/90" : "border-azul/10 text-texto"}`}>
+                <p className={`mt-4 min-h-19.5 border-t pt-3 text-[15px] leading-5.5 ${plan.highlighted ? "border-white/20 text-white/90" : "border-azul/10 text-texto"}`}>
                   {plan.note}
                 </p>
               )}
