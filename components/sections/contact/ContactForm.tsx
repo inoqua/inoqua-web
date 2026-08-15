@@ -124,10 +124,11 @@ function Dropdown({ value, placeholder, options, onChange, error }: DropdownProp
  * Formulario de "Solicitá la evaluación técnica de tu negocio". Es un componente
  * de cliente (maneja estado de los inputs) exclusivo de la landing de Contacto.
  *
- * El envío se hace vía Netlify Forms: se postea a "/" con el body codificado como
- * el resto del sitio (SPA-style), ya que Netlify intercepta cualquier POST que
- * incluya el campo "form-name". El formulario estático equivalente para que
- * Netlify lo detecte en build está en public/forms/contacto.html.
+ * El envío se hace vía Netlify Forms, posteando directamente a la URL del
+ * formulario estático (public/forms/contacto.html -> /forms/contacto.html).
+ * No se puede postear a "/" ni a otras rutas de la app: en este sitio son
+ * renderizadas por Next.js (Function/Edge Function) y Netlify solo puede
+ * interceptar el POST cuando el destino es un archivo estático real.
  */
 function encodeForm(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
@@ -196,11 +197,12 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
     setSending(true);
     setSubmitError(false);
     try {
-      await fetch("/", {
+      const res = await fetch("/forms/contacto.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeForm({ "form-name": "contacto", ...form }),
       });
+      if (!res.ok) throw new Error("Netlify form submission failed");
       setSubmitted(true);
     } catch {
       setSubmitError(true);

@@ -32,7 +32,7 @@ const config: Config = {
         "titulo-xxl-hero-sm": ["28px", { lineHeight: "38px", fontWeight: "700" }], // Versión mobile del título hero (< sm)
         "subtitulo-35": ["23px", { lineHeight: "34px", fontWeight: "700" }], // Subtitulo35 (35 -> 25 -> 23)
         "subtitulo-35-sm": ["22px", { lineHeight: "30px", fontWeight: "700" }], // Versión mobile de Subtitulo35 (< sm)
-        "subtitulo-xxl": ["14px", { lineHeight: "24px", fontWeight: "500" }], // Subtitulo XXL (24 -> 16 -> 14)
+        "subtitulo-xxl": ["15px", { lineHeight: "25px", fontWeight: "500" }], // Subtitulo XXL (24 -> 16 -> 14 -> 15)
         "parrafo-20": ["16px", { lineHeight: "27px", fontWeight: "500" }], // Parrafo 20 (20 -> 18 -> 16)
         "footer-titulo": ["20px", { lineHeight: "1", fontWeight: "600" }], // footer-titulo (24 -> 20)
         "card-titulo": ["16px", { lineHeight: "1.5", fontWeight: "700" }], // Card titulo (20 -> 17 -> 16)
