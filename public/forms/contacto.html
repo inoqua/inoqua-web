@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulario de contacto (uso interno de Netlify)</title>
+  </head>
+  <body>
+    <!--
+      Esta página no se muestra a los usuarios: existe solo para que Netlify
+      detecte el formulario "contacto" durante el build. El formulario real
+      se renderiza con React/Next.js (components/sections/contact/ContactForm.tsx)
+      y Netlify no puede leer formularios generados por JavaScript, por eso
+      necesita esta copia estática con los mismos campos.
+      Ver: https://docs.netlify.com/manage/forms/setup/#javascript-rendered-forms
+    -->
+    <form name="contacto" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nombre" />
+      <input type="tel" name="telefono" />
+      <input type="email" name="correo" />
+      <input type="text" name="negocio" />
+      <input type="text" name="subNegocio" />
+      <input type="text" name="situacion" />
+      <textarea name="comentarios"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>

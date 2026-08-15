@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { event } from "@/lib/analytics/gtag";
 
 export type ButtonVariant = "solid" | "outline" | "whatsapp" | "dark";
 
@@ -31,16 +34,18 @@ export default function Button({ label, href, variant = "solid", className = "" 
 
   const classes = `inline-flex items-center justify-center whitespace-nowrap rounded-[10px] px-5 py-[7px] font-semibold text-[15px] leading-[22px] transition-all duration-200 ease-out active:scale-95 ${variantClasses[variant]} ${className}`;
 
+  const handleClick = () => event({ action: "click", category: "cta", label });
+
   if (isExternal) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes} onClick={handleClick}>
         {label}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={classes} onClick={handleClick}>
       {label}
     </Link>
   );

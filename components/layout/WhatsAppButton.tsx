@@ -1,3 +1,7 @@
+"use client";
+
+import { event } from "@/lib/analytics/gtag";
+
 export default function WhatsAppButton() {
   return (
     <a
@@ -5,6 +9,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Hablar por WhatsApp"
+      onClick={() => event({ action: "click", category: "whatsapp", label: "Hablar por WhatsApp" })}
       className="group fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform duration-200 hover:scale-110 active:scale-95"
     >
       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-40 group-hover:opacity-60" />

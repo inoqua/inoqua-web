@@ -124,11 +124,15 @@ function Dropdown({ value, placeholder, options, onChange, error }: DropdownProp
  * Formulario de "Solicitá la evaluación técnica de tu negocio". Es un componente
  * de cliente (maneja estado de los inputs) exclusivo de la landing de Contacto.
  *
- * NOTA: el envío hoy solo valida y muestra un mensaje de confirmación en pantalla.
- * Para conectarlo a un backend real, reemplazá el cuerpo de `handleSubmit` por,
- * por ejemplo, un fetch a una API route de Next.js (app/api/contacto/route.ts)
- * que dispare un email o lo guarde en tu CRM.
+ * El envío se hace vía Netlify Forms: se postea a "/" con el body codificado como
+ * el resto del sitio (SPA-style), ya que Netlify intercepta cualquier POST que
+ * incluya el campo "form-name". El formulario estático equivalente para que
+ * Netlify lo detecte en build está en public/forms/contacto.html.
  */
+function encodeForm(data: Record<string, string>) {
+  return new URLSearchParams(data).toString();
+}
+
 export default function ContactForm({ title, subtitle, submitLabel }: ContactFormProps) {
   const [form, setForm] = useState({
     nombre: "",
@@ -140,6 +144,8 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
     comentarios: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [errors, setErrors] = useState<{
     nombre?: string;
     telefono?: string;
@@ -181,13 +187,26 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
     return nextErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
-    // TODO: conectar a un endpoint real (ver nota arriba).
-    setSubmitted(true);
+
+    setSending(true);
+    setSubmitError(false);
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeForm({ "form-name": "contacto", ...form }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -211,11 +230,27 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+            <form
+              name="contacto"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              noValidate
+              className="flex flex-col gap-5"
+            >
+              <input type="hidden" name="form-name" value="contacto" />
+              <p className="hidden">
+                <label>
+                  No completar este campo: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                </label>
+              </p>
+
               <div>
                 <label className="mb-1.5 block text-[18px] font-medium text-azul">Nombre *</label>
                 <input
                   type="text"
+                  name="nombre"
                   placeholder="Tu nombre y apellido"
                   className={`${inputClass} ${errors.nombre ? errorInputClass : ""}`}
                   value={form.nombre}
@@ -232,6 +267,7 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
                   <label className="mb-1.5 block text-[18px] font-medium text-azul">Teléfono *</label>
                   <input
                     type="tel"
+                    name="telefono"
                     placeholder="Teléfono de contacto"
                     className={`${inputClass} ${errors.telefono ? errorInputClass : ""}`}
                     value={form.telefono}
@@ -246,6 +282,7 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
                   <label className="mb-1.5 block text-[18px] font-medium text-azul">Correo electrónico *</label>
                   <input
                     type="text"
+                    name="correo"
                     placeholder="Correo electrónico"
                     className={`${inputClass} ${errors.correo ? errorInputClass : ""}`}
                     value={form.correo}
@@ -270,6 +307,7 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
                     if (errors.negocio || errors.subNegocio) setErrors({ ...errors, negocio: undefined, subNegocio: undefined });
                   }}
                 />
+                <input type="hidden" name="negocio" value={form.negocio} />
                 {errors.negocio && <p className="mt-1.5 text-[14px] text-red-600">{errors.negocio}</p>}
               </div>
 
@@ -285,6 +323,7 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
                       if (errors.subNegocio) setErrors({ ...errors, subNegocio: undefined });
                     }}
                   />
+                  <input type="hidden" name="subNegocio" value={form.subNegocio} />
                   {errors.subNegocio && <p className="mt-1.5 text-[14px] text-red-600">{errors.subNegocio}</p>}
                 </div>
               )}
@@ -314,6 +353,7 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
                 <label className="mb-1.5 block text-[18px] font-medium text-azul">¿Cómo podemos ayudarte? *</label>
                 <textarea
                   rows={4}
+                  name="comentarios"
                   placeholder="Contanos tus ideas"
                   className={`${inputClass} resize-none ${errors.comentarios ? errorInputClass : ""}`}
                   value={form.comentarios}
@@ -325,11 +365,22 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
                 {errors.comentarios && <p className="mt-1.5 text-[14px] text-red-600">{errors.comentarios}</p>}
               </div>
 
+              {submitError && (
+                <p className="text-[14px] text-red-600">
+                  No pudimos enviar tu consulta. Por favor, intentá nuevamente o escribinos a{" "}
+                  <a href="mailto:info@inoqua.com.uy" className="underline">
+                    info@inoqua.com.uy
+                  </a>
+                  .
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="mt-2 inline-flex w-fit items-center justify-center rounded-[10px] bg-naranja px-7 py-[8px] text-[18px] font-semibold text-azul transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e67d1e] hover:shadow-lg active:scale-95"
+                disabled={sending}
+                className="mt-2 inline-flex w-fit items-center justify-center rounded-[10px] bg-naranja px-7 py-[8px] text-[18px] font-semibold text-azul transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e67d1e] hover:shadow-lg active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {submitLabel}
+                {sending ? "Enviando…" : submitLabel}
               </button>
             </form>
           )}

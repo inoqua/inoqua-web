@@ -46,9 +46,9 @@ export default function FinalCTA({
         <h2 className="mx-auto md:text-titulo-xxl text-title-cta-sm text-[#282828]" style={{ maxWidth: titleMaxWidth }}>
           {title}
         </h2>
-        <p className="mt-6 lg:max-w-xl text-[18px] leading-[32px] text-black">
+        <p className="mt-6 lg:max-w-xl text-[18px] leading-[32px] md:text-[16px] md:leading-[30px] text-black">
           {subtitleRegular}</p>
-        <p className="text-[18px] leading-[32px] text-black font-semibold">{subtitleBold}</p>
+        <p className="text-[18px] leading-[32px] md:text-[16px] md:leading-[30px] text-black font-semibold">{subtitleBold}</p>
         
         <div className={`mt-8 flex flex-nowrap justify-center gap-3 ${ctaContainerClassName}`}>
           <Button label={button.label} href={button.href} variant={button.variant ?? "solid"} />
