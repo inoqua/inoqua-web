@@ -36,7 +36,7 @@ function NavDropdown({ label, items, pathname }: { label: string; items: LinkIte
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
-        className={`flex items-center gap-2 text-[16px] font-medium transition-colors ${
+        className={`flex items-center gap-2 text-[15px] font-medium transition-colors ${
           isSectionActive ? "text-naranja" : "text-azul"
         }`}
       >
@@ -107,7 +107,7 @@ function MobileNavDropdown({
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className={`flex w-full items-center justify-between text-[16px] font-medium transition-colors ${
+        className={`flex w-full items-center justify-between text-[15px] font-medium transition-colors ${
           isSectionActive ? "text-naranja" : "text-azul"
         }`}
         aria-expanded={open}

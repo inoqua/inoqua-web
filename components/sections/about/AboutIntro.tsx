@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 type AboutIntroProps = {
   title: string;
   paragraphs: string[];
+  image?: string;
   imagePosition?: "left" | "right";
   button?: { label: string; href: string };
   /** Excepción puntual para reducir el margen superior cuando la sección va pegada a otra. */
@@ -22,6 +23,7 @@ type AboutIntroProps = {
 export default function AboutIntro({
   title,
   paragraphs,
+  image = "/img/nosotros-about.png",
   imagePosition = "right",
   button,
   spacingClassName = "py-17",
@@ -54,7 +56,7 @@ export default function AboutIntro({
           delay={150}
           className={`relative h-[340px] overflow-hidden rounded-panel ${imageWidthClass} ${imageOrderClass}`}
         >
-          <Image src="/img/nosotros-about.png" alt={title} fill sizes="(max-width: 1024px) 90vw, 492px" className="object-cover" />
+          <Image src={image} alt={title} fill sizes="(max-width: 1024px) 90vw, 492px" className="object-cover" />
         </Reveal>
       </div>
     </section>

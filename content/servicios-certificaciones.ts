@@ -36,12 +36,11 @@ export const strategicSupportSection = {
     "En InoQua acompañamos a las organizaciones en el diseño, implementación y mejora de sistemas de gestión alineados con estándares internacionales. Trabajamos con cada equipo para que la certificación no sea un trámite aislado, sino parte natural de cómo opera la empresa.",
     "No solo somos consultores, somos tu respaldo técnico permanente.",
   ],
+  image: "/img/certificaciones-solucion.png",
   imagePosition: "left" as const,
 };
 
 export const strategicSupportButton = { label: "Solicitar asesoramiento", href: "/contacto" };
-
-export const certificationsIntro = "En InoQua te acompañamos en la implementación de sistemas de gestión alineados con estándares internacionales.";
 
 export const certificationCardsSection = {
   title: "Impulsamos la Excelencia Normativa",

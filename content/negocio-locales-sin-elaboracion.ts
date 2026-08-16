@@ -84,5 +84,5 @@ export const finalCtaContent = {
   subtitleRegular: "Asegurá tu aprobación oficial con nuestro respaldo. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/negocio-cta2.png",
+  image: "/img/negocio-cta3.png",
 };

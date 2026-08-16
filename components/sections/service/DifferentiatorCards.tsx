@@ -42,7 +42,7 @@ export default function DifferentiatorCards({ eyebrow, title, cards, quote }: Di
 
         <Reveal delay={400}>
           <div className="mt-4 rounded-2xl border-2 border-azul/10 bg-white px-8 py-3 text-center">
-            <p className="text-subtitulo-xxl text-azul">{quote}</p>
+            <p className="text-parrafo-20 text-azul">{quote}</p>
           </div>
         </Reveal>
       </div>

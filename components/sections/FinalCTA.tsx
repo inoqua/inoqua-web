@@ -16,7 +16,7 @@ type FinalCTAProps = {
   ctaContainerClassName?: string;
   /** Foto de fondo — por defecto la genérica de Home. Cada landing puede pasar la suya. */
   image?: string;
-  /** Ancho máximo del título — por defecto 42rem. Cada landing puede angostarlo/ampliarlo. */
+  /** Ancho máximo del título — por defecto 36rem. Cada landing puede angostarlo/ampliarlo. */
   titleMaxWidth?: string;
 };
 
@@ -33,7 +33,7 @@ export default function FinalCTA({
   secondaryButton,
   ctaContainerClassName = "",
   image = "/img/home1.jpg",
-  titleMaxWidth = "42rem",
+  titleMaxWidth = "36rem",
 }: FinalCTAProps) {
   return (
     <section className="relative flex min-h-[420px] items-center justify-center overflow-hidden px-6 py-17 sm:px-10 lg:px-20">
@@ -42,7 +42,7 @@ export default function FinalCTA({
       </Parallax>
       <div className="absolute inset-0 bg-azul/20" />
 
-      <Reveal className="relative mx-auto flex w-full max-w-4xl flex-col items-center rounded-final bg-white/85 px-10 py-14 text-center shadow-lg backdrop-blur-sm">
+      <Reveal className="relative mx-auto flex w-full max-w-3xl flex-col items-center rounded-final bg-white/85 px-10 py-14 text-center shadow-lg backdrop-blur-sm md:px-8">
         <h2 className="mx-auto md:text-titulo-xxl text-title-cta-sm text-[#282828]" style={{ maxWidth: titleMaxWidth }}>
           {title}
         </h2>
