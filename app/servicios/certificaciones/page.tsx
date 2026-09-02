@@ -31,7 +31,7 @@ export const metadata = buildMetadata({
     "certificación ISO 22000 Uruguay",
     "certificación ISO 9001 alimentos",
     "sistemas de gestión de calidad",
-    "consultoría certificaciones ISO",
+    "consultora certificaciones ISO",
   ],
 });
 
@@ -51,7 +51,6 @@ export default function CertificacionesPage() {
       <AboutIntro
         {...strategicSupportSection}
         button={strategicSupportButton}
-        spacingClassName="pt-7 pb-15"
         imageFullWidth
         gapClassName="gap-5"
       />

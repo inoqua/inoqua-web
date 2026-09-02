@@ -26,7 +26,7 @@ export default function AboutIntro({
   image = "/img/nosotros-about.png",
   imagePosition = "right",
   button,
-  spacingClassName = "py-17",
+  spacingClassName = "py-12",
   imageFullWidth = false,
   gapClassName = "gap-12",
 }: AboutIntroProps) {

@@ -21,7 +21,7 @@ export default function BusinessTypeGrid({ title, chips }: BusinessTypeGridProps
     : "w-[calc(50%_-_0.5rem)] sm:w-[calc(33.3333%_-_0.667rem)] lg:w-[calc(25%_-_0.75rem)]";
 
   return (
-    <section className="mx-auto max-w-content px-6 py-17 sm:px-10 lg:px-20">
+    <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
       <Reveal className="text-center">
         <h2 className="mx-auto max-w-3xl text-subtitulo-35-sm sm:text-subtitulo-35 text-azul">{title}</h2>
       </Reveal>

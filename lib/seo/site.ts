@@ -3,11 +3,11 @@
  * negocio en cada archivo de metadata/structured data.
  */
 export const site = {
-  name: "InoQua Consultoría Alimentaria",
+  name: "InoQua Consultora Alimentaria",
   shortName: "InoQua",
   siteUrl: "https://inoqua.com.uy",
   description:
-    "Consultoría especializada en habilitaciones bromatológicas, representación técnica y normativa alimentaria en Uruguay.",
+    "Consultora especializada en habilitaciones bromatológicas, representación técnica y normativa alimentaria en Uruguay.",
   locale: "es_UY",
   phone: "+59899286804",
   phoneDisplay: "+598 99 286 804",

@@ -10,7 +10,7 @@ type CategoryCardsProps = {
 /** Par de tarjetas oscuras (ícono + título + texto) debajo del hero, para destacar las categorías del servicio. */
 export default function CategoryCards({ cards }: CategoryCardsProps) {
   return (
-    <section className="mx-auto max-w-content px-6 py-17 sm:px-10 lg:px-20">
+    <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {cards.map((card, i) => (
           <Reveal key={card.title} delay={i * 100}>

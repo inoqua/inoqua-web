@@ -184,7 +184,7 @@ export default function Navbar() {
         <Link href="/" className="relative h-10.5 w-32.5 shrink-0">
           <Image
             src="/img/logo.png"
-            alt="InoQua Consultoría Alimentaria"
+            alt="InoQua Consultora Alimentaria"
             fill
             sizes="130px"
             className="object-contain object-left"

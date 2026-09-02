@@ -40,7 +40,7 @@ type ServicesGridProps = {
  */
 export default function ServicesGrid({ title, subtitle, cards }: ServicesGridProps) {
   return (
-    <section id="servicios" className="mx-auto max-w-content px-4 py-17 sm:px-10 lg:px-20">
+    <section id="servicios" className="mx-auto max-w-content px-4 py-12 sm:px-10 lg:px-20">
       <Reveal className="text-center">
         <h2 className="text-titulo-xxl text-azul">{title}</h2>
         <p className="mt-2 text-subtitulo-xxl text-texto">{subtitle}</p>

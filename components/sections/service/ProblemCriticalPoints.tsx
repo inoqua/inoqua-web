@@ -17,7 +17,7 @@ type ProblemCriticalPointsProps = {
  */
 export default function ProblemCriticalPoints({ title, cards, criticalPoints }: ProblemCriticalPointsProps) {
   return (
-    <section className="mx-auto max-w-content px-6 pt-6 pb-5 sm:px-10 lg:px-20">
+    <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
       <Reveal>
         <h2 className="mx-auto max-w-xl text-subtitulo-35-sm sm:text-subtitulo-35 text-azul text-center">{title}</h2>
       </Reveal>

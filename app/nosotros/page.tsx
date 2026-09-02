@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
   description:
     "Conocé al equipo de InoQua: profesionales especializados en inocuidad alimentaria, habilitaciones y normativa bromatológica en Uruguay.",
   path: "/nosotros",
-  keywords: ["consultora alimentaria Uruguay", "equipo InoQua", "consultoría bromatológica Montevideo"],
+  keywords: ["consultora alimentaria Uruguay", "equipo InoQua", "consultora bromatológica Montevideo"],
 });
 
 export default function NosotrosPage() {

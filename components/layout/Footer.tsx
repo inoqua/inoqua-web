@@ -33,14 +33,14 @@ export default function Footer() {
             <div className="relative h-18 w-42">
               <Image
                 src="/img/Logo-blanco.png"
-                alt="InoQua Consultoría Alimentaria"
+                alt="InoQua Consultora Alimentaria"
                 fill
                 sizes="180px"
                 className="object-contain object-left"
               />
             </div>
             <p className="mt-4 max-w-[280px] text-[15px] leading-relaxed text-white/80">
-              Consultoría especializada en habilitaciones, representación técnica y normativa
+              Consultora especializada en habilitaciones, representación técnica y normativa
               alimentaria.
             </p>
             <div className="mt-6 flex gap-4">
@@ -153,7 +153,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center gap-2 border-t border-white/10 pt-6 text-center text-[15px] text-white/70 sm:flex-row sm:justify-between sm:gap-4">
           <p>
-            © {new Date().getFullYear()} InoQua Consultoría Alimentaria. Todos los derechos reservados.
+            © {new Date().getFullYear()} InoQua Consultora Alimentaria. Todos los derechos reservados.
           </p>
           <p className="text-white/40">
             Desarrollado por {" "}

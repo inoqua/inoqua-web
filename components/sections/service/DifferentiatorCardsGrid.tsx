@@ -16,7 +16,7 @@ type DifferentiatorCardsGridProps = {
  */
 export default function DifferentiatorCardsGrid({ eyebrow, title, cards, quote }: DifferentiatorCardsGridProps) {
   return (
-    <section className="bg-azul/[0.06] py-17">
+    <section className="bg-azul/[0.06] py-12">
       <div className="mx-auto max-w-content px-6 sm:px-10 lg:px-20">
         <Reveal className="text-center">
           <span className="text-xs font-medium uppercase tracking-[1.2px] text-naranja/80">{eyebrow}</span>

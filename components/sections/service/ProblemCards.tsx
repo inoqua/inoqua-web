@@ -28,7 +28,7 @@ export default function ProblemCards({
       ? "sm:grid-cols-2 lg:grid-cols-4"
       : "sm:grid-cols-3 lg:grid-cols-5";
   return (
-    <section className="mx-auto max-w-content px-4 pt-6 pb-5 sm:px-10 lg:px-20">
+    <section className="mx-auto max-w-content px-4 py-12 sm:px-10 lg:px-20">
       <Reveal>
         <h2 className={`mx-auto ${titleMaxWidthClassName} text-subtitulo-35-sm sm:text-subtitulo-35 text-azul text-center`}>{title}</h2>
         <p className="mt-10 text-subtitulo-xxl text-texto">{subtitle}</p>

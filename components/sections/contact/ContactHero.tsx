@@ -61,7 +61,7 @@ const icons: Record<ContactInfoCard["icon"], React.ReactNode> = {
  */
 export default function ContactHero({ title, subtitle, cards }: ContactHeroProps) {
   return (
-    <section className="relative overflow-hidden px-6 py-17 sm:px-10 lg:px-20">
+    <section className="relative overflow-hidden px-6 py-12 sm:px-10 lg:px-20">
       <Parallax className="absolute inset-x-0 -inset-y-[15%]">
         <Image src="/img/negocio-cta3.png" alt="" fill className="object-cover" />
       </Parallax>

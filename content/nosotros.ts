@@ -10,7 +10,7 @@ export const aboutHeroContent = {
 };
 
 export const aboutIntroContent = {
-  title: "Expertas en consultoría técnica para la industria alimentaria",
+  title: "Expertos en consultora técnica para la industria alimentaria",
   paragraphs: [
     "Trabajamos con un enfoque práctico, orientado a resolver problemas reales y asegurar que cada negocio pueda operar de forma segura y en regla.",
     "Nuestro foco es claro: vos te enfocás en tu negocio, nosotros en que esté habilitado y funcione correctamente todos los días.",

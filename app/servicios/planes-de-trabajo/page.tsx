@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path,
   keywords: [
     "planes representación técnica alimentos",
-    "consultoría bromatológica planes",
+    "consultora bromatológica planes",
     "precio representación técnica Uruguay",
   ],
 });

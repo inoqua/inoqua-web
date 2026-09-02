@@ -8,7 +8,7 @@
 export const heroContent = {
   title: "Impulsá tu empresa de alimentos con seguridad y respaldo técnico",
   subtitle:
-    "Somos una consultoría especializada en el área alimentaria, enfocada en acompañar a empresas en sus procesos de habilitación, cumplimiento normativo y gestión técnica.",
+    "Somos una consultora especializada en el área alimentaria, enfocada en acompañar a empresas en sus procesos de habilitación, cumplimiento normativo y gestión técnica.",
   imageLabel: "Foto hero",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },

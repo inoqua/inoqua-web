@@ -64,7 +64,7 @@ export default function ProcessSteps({ eyebrow, title, subtitle, steps,subTitleM
   const smCols = steps.length === 5 ? 3 : 2;
 
   return (
-    <section className="bg-azul py-17">
+    <section className="bg-azul py-12">
       <div className="mx-auto max-w-content px-6 sm:px-10 lg:px-20">
         <Reveal className="text-center">
           <span className="text-[13px] font-normal tracking-[1.2px] text-naranja">{eyebrow}</span>

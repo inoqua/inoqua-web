@@ -15,12 +15,12 @@ import {
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata = buildMetadata({
-  title: "Inoqua Consultoría Bromatológica",
+  title: "Inoqua Consultora Bromatológica",
   description:
-    "Consultoría especializada en habilitaciones bromatológicas, representación técnica y normativa alimentaria en Uruguay. Evaluamos tu caso sin compromiso.",
+    "consultora especializada en habilitaciones bromatológicas, representación técnica y normativa alimentaria en Uruguay. Evaluamos tu caso sin compromiso.",
   path: "/",
   keywords: [
-    "consultoría alimentaria Uruguay",
+    "consultora alimentaria Uruguay",
     "habilitación bromatológica Montevideo",
     "representación técnica alimentos",
     "consultora alimentaria",

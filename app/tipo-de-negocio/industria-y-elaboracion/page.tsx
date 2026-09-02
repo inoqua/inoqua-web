@@ -27,7 +27,7 @@ export const metadata = buildMetadata({
   keywords: [
     "habilitación industria alimentaria Uruguay",
     "representación técnica planta de alimentos",
-    "consultoría bromatológica industrial",
+    "consultora bromatológica industrial",
   ],
 });
 

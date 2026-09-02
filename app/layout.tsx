@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: [
-    "consultoría alimentaria Uruguay",
+    "consultora alimentaria Uruguay",
     "habilitación bromatológica",
     "representación técnica alimentos",
-    "consultoría bromatológica Montevideo",
+    "consultora bromatológica Montevideo",
   ],
   authors: [{ name: site.name }],
   robots: {

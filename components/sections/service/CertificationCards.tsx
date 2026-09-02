@@ -22,7 +22,7 @@ type CertificationCardsProps = {
  */
 export default function CertificationCards({ title, subtitle, cards }: CertificationCardsProps) {
   return (
-    <section className="mx-auto max-w-content px-6 py-10 sm:px-10 lg:px-20">
+    <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2 className="mt-2 text-titulo-xxl text-azul">{title}</h2>
         <p className="mt-3 text-subtitulo-xxl text-texto mx-auto max-w-xl">{subtitle}</p>

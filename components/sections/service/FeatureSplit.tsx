@@ -27,7 +27,7 @@ export default function FeatureSplit({
   const imageOrderClass = imagePosition === "left" ? "lg:order-first" : "lg:order-last";
 
   return (
-    <section className="py-17">
+    <section className="py-12">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:px-20">
         <Reveal className={textOrderClass}>
           <h2 className="text-subtitulo-35-sm sm:text-subtitulo-35 text-azul lg:w-100">{title}</h2>
