@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
+import { event } from "@/lib/analytics/gtag";
 
 type ContactFormProps = {
   title: string;
@@ -135,6 +136,8 @@ function encodeForm(data: Record<string, string>) {
 }
 
 export default function ContactForm({ title, subtitle, submitLabel }: ContactFormProps) {
+  const submittingRef = useRef(false);
+
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
@@ -190,21 +193,30 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (submittingRef.current) return;
+
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
+    submittingRef.current = true;
     setSending(true);
     setSubmitError(false);
+
     try {
       const res = await fetch("/forms/contacto.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeForm({ "form-name": "contacto", ...form }),
       });
+
       if (!res.ok) throw new Error("Netlify form submission failed");
+
+      event({ action: "contact_form_submit", category: "contact" });
       setSubmitted(true);
     } catch {
+      submittingRef.current = false;
       setSubmitError(true);
     } finally {
       setSending(false);
