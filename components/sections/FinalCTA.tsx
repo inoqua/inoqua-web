@@ -42,13 +42,13 @@ export default function FinalCTA({
       </Parallax>
       <div className="absolute inset-0 bg-azul/20" />
 
-      <Reveal className="relative mx-auto flex w-full max-w-3xl flex-col items-center rounded-final bg-white/85 px-10 py-14 text-center shadow-lg backdrop-blur-sm md:px-8">
-        <h2 className="mx-auto md:text-titulo-xxl text-title-cta-sm text-[#282828]" style={{ maxWidth: titleMaxWidth }}>
+      <Reveal className="relative mx-auto flex w-full max-w-3xl flex-col items-stretch rounded-final bg-white/85 px-10 py-14 text-left shadow-lg backdrop-blur-sm md:items-center md:px-8 md:text-center">
+        <h2 className="mx-0 w-full text-title-cta-sm text-[#282828] md:mx-auto md:text-titulo-xxl" style={{ maxWidth: titleMaxWidth }}>
           {title}
         </h2>
-        <p className="mt-6 lg:max-w-xl text-[18px] leading-[32px] md:text-[16px] md:leading-[30px] text-black">
+        <p className="mt-6 w-full lg:max-w-xl text-[18px] leading-[32px] md:text-[16px] md:leading-[30px] text-black">
           {subtitleRegular}</p>
-        <p className="text-[18px] leading-[32px] md:text-[16px] md:leading-[30px] text-black font-semibold">{subtitleBold}</p>
+        <p className="w-full text-[18px] leading-[32px] md:text-[16px] md:leading-[30px] text-black font-semibold">{subtitleBold}</p>
         
         <div className={`mt-8 flex flex-nowrap justify-center gap-3 ${ctaContainerClassName}`}>
           <Button label={button.label} href={button.href} variant={button.variant ?? "solid"} />

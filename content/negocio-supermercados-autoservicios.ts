@@ -1,15 +1,15 @@
 export const heroContent = {
   breadcrumb: "Tipo de negocio — Supermercados y autoservicios",
-  title: "Asesoría bromatológica para supermercados y autoservicios",
+  title: "Habilitación y asesoría bromatológica para supermercados y autoservicios",
   subtitle:
-    "La complejidad de un autoservicio exige un control riguroso. Evitá los desajustes que ponen en riesgo tu habilitación.",
+    "¿Vas a abrir un autoservicio o te observaron un sector? Coordinamos la habilitación integral de tu supermercado: control sanitario por área, cadena de frío y registros obligatorios.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/supermercados-hero.png",
 };
 
 export const problemSection = {
-  title: "Las soluciones técnicas que tu comercio necesita para avanzar",
+  title: "¿Manejás cada sector por separado y perdés el control sanitario?",
   subtitle: "Muchos emprendedores se encuentran con:",
   cards: [
     { icon: "package" as const, text: "Gestión aislada de las normativas sectoriales" },
@@ -58,7 +58,7 @@ export const differentiatorSection = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo ordenamos el cumplimiento de tu gran superficie?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   closingText: "Más que una solución puntual, somos tu aliado estratégico",
   steps: [
@@ -70,8 +70,8 @@ export const processStepsSection = {
 };
 
 export const finalCtaContent = {
-  title: "Centralizá la habilitación técnica de tu gran superficie",
-  subtitleRegular: "Garantizá el control sanitario de cada sector. ",
+  title: "¿Necesitás habilitar tu supermercado o poner en regla un sector?",
+  subtitleRegular: "Te acompañamos en las auditorías internas de cada área crítica.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
   image: "/img/supermercados-hero.png",

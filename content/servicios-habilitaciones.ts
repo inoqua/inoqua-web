@@ -1,15 +1,15 @@
 export const heroContent = {
   breadcrumb: "Servicios — Habilitaciones / Renovaciones bromatológicas",
-  title: "Habilitá tu empresa de alimentos sin multas, demoras ni errores",
+  title: "Habilitación bromatológica de tu empresa de alimentos sin multas ni demoras",
   subtitle:
-    "Te acompañamos desde el inicio hasta tener todo en regla, sin que tengas que perder tiempo entendiendo trámites confusos.",
+    "¿Necesitás habilitar o renovar tu negocio? Gestionamos tu trámite ante el SRA y tu registro en RUNAEV, desde la evaluación del local hasta la aprobación del expediente.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/habilitaciones-hero.jpg",
 };
 
 export const problemSection = {
-  title: "¿Estás intentando habilitar tu negocio y no sabés por dónde empezar?",
+  title: "¿Estás intentando habilitar tu empresa alimentaria y no sabés por dónde empezar?",
   subtitle: "Muchos emprendedores se encuentran con:",
   cards: [
     { icon: "clipboard" as const, text: "Requisitos poco claros" },
@@ -24,8 +24,8 @@ export const alertBannerText =
   "El problema no es tu negocio. Es no contar con el respaldo técnico adecuado desde el inicio";
 
 export const featureSplitSection = {
-  title: "Nos encargamos de todo el proceso por vos",
-  subtitle: "En InoQua te acompañamos desde la evaluación inicial hasta la aprobación final.",
+  title: "Gestionamos tu habilitación SRA y tu registro RUNAEV",
+  subtitle: "Te acompañamos desde el diagnóstico inicial hasta la aprobación final.",
   items: [
     "Evaluación completa del local",
     "Detección de incumplimientos antes de la inspección",
@@ -42,7 +42,7 @@ export const featureSplitSection = {
 
 export const differentiatorSection = {
   eyebrow: "NUESTRO DIFERENCIAL",
-  title: 'No trabajamos solo para "presentar papeles"',
+  title: '¿Ya te rebotaron un expediente o te pidieron reformas inesperadas?',
   cards: [
     {
       icon: "close" as const,
@@ -69,7 +69,7 @@ export const differentiatorSection = {
 };
 
 export const businessTypesGrid = {
-  title: "Trabajamos con distintos tipos de negocios",
+  title: "Habilitación de locales comerciales y empresas alimentarias",
   chips: [
     { icon: "fork" as const, label: "Restaurantes" },
     { icon: "croissant" as const, label: "Panaderías" },
@@ -91,7 +91,7 @@ export const businessTypesGrid = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo es el proceso de habilitación paso a paso?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   closingText:
     "Trabajamos con un enfoque práctico, orientado a resolver problemas reales y asegurar que cada negocio pueda operar de forma segura y en regla",
@@ -104,8 +104,8 @@ export const processStepsSection = {
 };
 
 export const finalCtaContent = {
-  title: "El problema no es el trámite, sino la falta de respaldo técnico para enfrentarlo",
-  subtitleRegular: "Un error puede costarte tiempo, dinero o incluso tu negocio. ",
+  title: "¿Vas a abrir un negocio de alimentos o te observaron en una inspección?",
+  subtitleRegular: "Te acompañamos en la habilitación de tu empresa alimentaria.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
   image: "/img/servicios-cta1.png",

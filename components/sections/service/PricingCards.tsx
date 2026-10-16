@@ -28,9 +28,9 @@ function TickIcon({ light = false }: { light?: boolean }) {
 export default function PricingCards({ title, subtitle, plans }: PricingCardsProps) {
   return (
     <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
-      <Reveal className="text-center">
+      <Reveal className="text-left md:text-center">
         <h2 className="mt-2 text-titulo-xxl text-azul">{title}</h2>
-        <p className="mt-3 text-subtitulo-xxl text-texto mx-auto max-w-xl">{subtitle}</p>
+        <p className="mt-3 max-w-xl text-subtitulo-xxl text-texto md:mx-auto">{subtitle}</p>
       </Reveal>
 
       <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

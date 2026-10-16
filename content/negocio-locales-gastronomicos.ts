@@ -1,15 +1,15 @@
 export const heroContent = {
   breadcrumb: "Tipo de negocio — Locales gastronómicos",
-  title: "Habilitá tu local gastronómico sin multas ni observaciones",
+  title: "Habilitación bromatológica de restaurantes y locales gastronómicos",
   subtitle:
-    "Adaptamos los procesos de tu cocina a las normativas vigentes para evitar costosas multas y sanciones operativas.",
+    "¿Vas a abrir un local gastronómico? Gestionamos el trámite bromatológico de tu restaurante, rotisería, panadería o cocina y adaptamos tus procesos a la normativa vigente.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/localesGastronomicos-hero.png",
 };
 
 export const problemSection = {
-  title: "Los desafíos que frenan la apertura y operación de tu cocina",
+  title: "¿Vas a abrir un restaurante y ya te frenaron los trámites?",
   subtitle: "Muchos emprendedores se encuentran con:",
   cards: [
     { icon: "clock" as const, text: "Demoras por retrasos en trámites municipales" },
@@ -20,8 +20,8 @@ export const problemSection = {
 };
 
 export const featureSplitSection = {
-  title: "Nos encargamos de todo el proceso por vos",
-  subtitle: "En InoQua te acompañamos desde la evaluación inicial hasta la aprobación final.",
+  title: "Gestionamos el trámite bromatológico de tu negocio",
+  subtitle: "Desde el diseño técnico de tu cocina hasta el seguimiento del expediente.",
   items: [
     "Diseño de soluciones técnicas para tu cocina",
     "Respuestas profesionales para operar con tranquilidad",
@@ -62,7 +62,7 @@ export const differentiatorSection = {
 };
 
 export const businessTypesGrid = {
-  title: "Para quién es este servicio",
+  title: "¿Qué locales gastronómicos habilitamos?",
   chips: [
     { icon: "fork" as const, label: "Restaurantes" },
     { icon: "hamburger" as const, label: "Rotiserías" },
@@ -81,7 +81,7 @@ export const businessTypesGrid = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo es el proceso de habilitación de tu cocina?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   closingText: "Más que una solución puntual, somos tu aliado estratégico",
   steps: [
@@ -93,7 +93,7 @@ export const processStepsSection = {
 };
 
 export const finalCtaContent = {
-  title: "Llevá la gestión técnica de tu cocina al día",
+  title: "¿Necesitás habilitar tu restaurante en Montevideo?",
   subtitleRegular: "Asegurá tu aprobación oficial con nuestro respaldo. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },

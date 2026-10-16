@@ -1,15 +1,15 @@
 export const heroContent = {
   breadcrumb: "Servicios — Capacitaciones",
-  title: "Capacitá a tu equipo y evitá errores que pueden costarte caro",
+  title: "Capacitaciones en BPM y manipulación de alimentos",
   subtitle:
-    "Diseñamos e implementamos capacitaciones en inocuidad alimentaria adaptadas a tu empresa, cumpliendo con la normativa y mejorando el funcionamiento real del negocio.",
+    "¿Tu equipo manipula alimentos sin formación? Capacitamos en Buenas Prácticas de Manufactura, manipulación segura y prevención de contaminación cruzada, con contenidos adaptados a tu rubro.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/capacitaciones-hero.png",
 };
 
 export const problemSection = {
-  title: "Capacitá a tu equipo y evitá errores costosos",
+  title: "¿Tu equipo manipula alimentos sin buenas prácticas?",
   subtitle:
     "Diseñamos capacitaciones en inocuidad alimentaria adaptadas a tu empresa.",
   cards: [
@@ -24,8 +24,8 @@ export const problemSection = {
 export const alertBannerText = "Evitá riesgos constantes capacitando a tu equipo de forma correcta";
 
 export const featureSplitSection = {
-  title: "Capacitaciones prácticas y alineadas a normativa",
-  subtitle: "En InoQua diseñamos programas de capacitación específicos para cada tipo de empresa.",
+  title: "Capacitación e implementación de BPM alineadas a la normativa",
+  subtitle: "Programas de BPM, HACCP, manipulación segura y procedimientos internos adaptados a tu empresa.",
   items: [
     "Capacitación en BPM (Buenas Prácticas de Manufactura)",
     "Programas HACCP",
@@ -62,7 +62,7 @@ export const differentiatorSection = {
 };
 
 export const audienceSection = {
-  title: "Para quién es este servicio",
+  title: "¿Quién necesita capacitación en manipulación de alimentos?",
   subtitle: "Trabajamos con empresas que manipulan alimentos en cualquier escala.",
   cards: [
     { icon: "fork" as const, text: "Tenés un local gastronómico en funcionamiento" },
@@ -74,9 +74,7 @@ export const audienceSection = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Nuestro método para capacitar a tu empresa",
-  subtitle:
-    "Un proceso ágil y planificado para transformar la teoría en hábitos prácticos, asegurando el cumplimiento legal de tu equipo.",
+  title: "¿Cómo implementamos tu plan de capacitación?",
   subTitleMaxWidth: "43rem",
   steps: [
     { number: 1, title: "Diagnóstico", text: "Evaluamos el nivel actual de tu equipo." },
@@ -87,8 +85,8 @@ export const processStepsSection = {
 };
 
 export const finalCtaContent = {
-  title: "No esperes a una inspección para entrenar a tu equipo de trabajo",
-  subtitleRegular: "La inocuidad alimentaria es la base de tu operación diaria. ",
+  title: "¿Necesitás capacitar a tu equipo o tener tus manuales al día?",
+  subtitleRegular: "Te acompañamos en la implementación de BPM en tu empresa.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
   image: "/img/servicios-cta3.png",

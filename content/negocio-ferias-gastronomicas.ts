@@ -1,8 +1,8 @@
 export const heroContent = {
   breadcrumb: "Tipo de negocio — Ferias gastronómicas",
-  title: "Organizá tu feria gastronómica con respaldo técnico y normas vigentes",
+  title: "Habilitación de ferias gastronómicas con respaldo técnico y normas vigentes",
   subtitle:
-    "Te ayudamos a gestionar todos los requisitos necesarios para que tu evento gastronómico funcione de forma segura, ordenada y conforme a la normativa vigente.",
+    "¿Estás organizando una feria gastronómica? Gestionamos los requisitos bromatológicos del evento: permisos, coordinación de elaboradores y verificación sanitaria antes y durante.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/ferias-hero.png",
@@ -22,7 +22,7 @@ export const problemSection = {
 };
 
 export const featureSplitSection = {
-  title: "Te acompañamos en todo tu evento",
+  title: "Gestionamos el cumplimiento normativo de todo tu evento",
   subtitle: "En InoQua brindamos asesoramiento integral para el cumplimiento normativo de tu feria.",
   items: [
     "Evaluación integral de condiciones del evento",
@@ -65,7 +65,7 @@ export const differentiatorSection = {
 };
 
 export const businessTypesGrid = {
-  title: "¿Para quién es este servicio?",
+  title: "¿Qué eventos gastronómicos habilitamos?",
   chips: [
     { icon: "hamburger" as const, label: "Ferias gastronómicas" },
     { icon: "store" as const, label: "Festivales gastronómicos" },
@@ -79,7 +79,7 @@ export const businessTypesGrid = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo preparamos tu evento paso a paso?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   steps: [
     { number: 1, title: "Evaluación Inicial", text: "Analizamos el evento y sus características." },

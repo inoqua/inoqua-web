@@ -9,7 +9,7 @@ export const heroContent = {
 };
 
 export const pricingSection = {
-  title: "Soluciones que se adaptan a tu empresa",
+  title: "¿Qué nivel de respaldo técnico necesita tu negocio?",
   subtitle:
     "Elegí el nivel de respaldo técnico que tu negocio necesita.",
   plans: [

@@ -2,14 +2,14 @@ export const heroContent = {
   breadcrumb: "Tipo de negocio — Espacios gastronómicos colectivos",
   title: "Habilitación de plazas de comidas y espacios gastronómicos colectivos",
   subtitle:
-    "Espacios donde conviven varios operadores gastronómicos requieren un enfoque técnico integral.",
+    "¿Gestionás un espacio con varios operadores gastronómicos? Coordinamos la habilitación de todos los locales y estandarizamos los protocolos sanitarios de las áreas comunes.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/espaciosColectivos-hero.png",
 };
 
 export const problemSection = {
-  title: "Soluciones integrales que tu espacio gastronómico necesita para avanzar",
+  title: "¿Un solo local mal gestionado puede clausurar todo tu espacio?",
   subtitle: "Muchos emprendedores se encuentran con:",
   cards: [
     { icon: "headset" as const, text: "Descontrol sanitario por múltiples operadores" },
@@ -20,8 +20,8 @@ export const problemSection = {
 };
 
 export const featureSplitSection = {
-  title: "Nos encargamos de todo el proceso por vos",
-  subtitle: "En InoQua te acompañamos desde la evaluación inicial hasta la aprobación final.",
+  title: "Coordinamos la habilitación de todos los locales",
+  subtitle: "Protocolos comunes, auditorías por sector y agilización de los trámites.",
   items: [
     "Coordinación integral de todos tus locales",
     "Estandarización de protocolos para áreas compartidas",
@@ -35,7 +35,7 @@ export const featureSplitSection = {
 
 export const differentiatorSection = {
   eyebrow: "NUESTRO DIFERENCIAL",
-  title: "Más que gestiones administrativas",
+  title: "¿Te cuesta controlar a múltiples operadores a la vez?",
   cards: [
     {
       icon: "package" as const,
@@ -58,7 +58,7 @@ export const differentiatorSection = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo centralizamos el cumplimiento de tu espacio?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   closingText: "Más que una solución puntual, somos tu aliado estratégico",
   steps: [
@@ -71,7 +71,7 @@ export const processStepsSection = {
 
 export const finalCtaContent = {
   title: "Centralizá la habilitación técnica de tu espacio gastronómico",
-  subtitleRegular: "Asegurá el cumplimiento colectivo bajo nuestro respaldo. ",
+  subtitleRegular: "Te acompañamos en las auditorías preventivas de cada local.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
   image: "/img/espaciosColectivos-hero.png",

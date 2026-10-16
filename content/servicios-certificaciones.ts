@@ -2,16 +2,16 @@ import { title } from "process";
 
 export const heroContent = {
   breadcrumb: "Servicios — Certificaciones y sistemas de gestión",
-  title: "Preparamos tu empresa para certificaciones nacionales e internacionales",
+  title: "Consultoría HACCP e ISO 22000 en Uruguay",
   subtitle:
-    "Implementamos sistemas de gestión que fortalecen la calidad, la inocuidad alimentaria y la competitividad de tu empresa.",
+    "¿Un cliente o una licitación te exige certificar? Implementamos sistemas de gestión de inocuidad alimentaria y calidad —HACCP, ISO 22000, ISO 9001 e ISO 27001— hasta la auditoría externa.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/certificaciones-hero.png",
 };
 
 export const problemSection = {
-  title: "¿Por qué las empresas buscan certificarse?",
+  title: "¿Por qué las empresas necesitan certificar su sistema de inocuidad alimentaria?",
   cards: [
     { icon: "building" as const, text: "Acceder a nuevos mercados" },
     { icon: "handshake" as const, text: "Cumplir requisitos de clientes" },
@@ -51,7 +51,7 @@ export const certificationCardsSection = {
       code: "ISO 22000",
       tag: "INOCUIDAD ALIMENTARIA",
       description:
-        "Implementamos sistemas para identificar, controlar y reducir peligros en la cadena alimentaria.",
+        "Implementamos tu plan HACCP y el sistema ISO 22000 para identificar y reducir peligros en toda la cadena alimentaria.",
       items: ["HACCP y BPM", "Programas prerrequisito", "Control de peligros químicos"],
     },
     {
@@ -73,7 +73,7 @@ export const certificationCardsSection = {
 };
 
 export const servicesIncludedSection = {
-  title: "Servicios Incluidos",
+  title: "¿Qué incluye nuestra consultoría?",
   subtitle: "Un proceso integral diseñado para que tu única preocupación sea el crecimiento de tu negocio.",
   items: [
     "Diagnóstico inicial",
@@ -101,9 +101,9 @@ export const businessTypesGrid = {
 };
 
 export const finalCtaContent = {
-  title: "No dejes la certificación para después",
+  title: "¿Necesitás prepararte para una auditoría?",
   subtitleRegular:
-    "Cada día sin certificar es una oportunidad comercial perdida. Asegura el futuro de tu empresa hoy mismo con nuestro diagnóstico.",
+    "Te acompañamos en la implementación de HACCP e ISO 22000 en Uruguay para que llegues sin desvíos a la certificación.",
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   image: "/img/servicios-cta5.png",
 };

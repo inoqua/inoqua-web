@@ -18,7 +18,7 @@ export default function DifferentiatorCardsGrid({ eyebrow, title, cards, quote }
   return (
     <section className="bg-azul/[0.06] py-12">
       <div className="mx-auto max-w-content px-6 sm:px-10 lg:px-20">
-        <Reveal className="text-center">
+        <Reveal className="text-left md:text-center">
           <span className="text-xs font-medium uppercase tracking-[1.2px] text-naranja/80">{eyebrow}</span>
           <h2 className="mt-2 text-titulo-xxl text-azul">{title}</h2>
         </Reveal>

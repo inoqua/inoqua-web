@@ -1,15 +1,15 @@
 export const heroContent = {
   breadcrumb: "Tipo de negocio — Industria y elaboración",
-  title: "Habilitaciones para industrias y elaboradores de alimentos",
+  title: "Habilitación y representación técnica para industrias y elaboradores de alimentos",
   subtitle:
-    "Si elaborás alimentos a escala industrial, te acompañamos en habilitaciones, registros y representación técnica.",
+    "¿Elaborás alimentos a escala industrial? Te acompañamos en habilitaciones, registro de productos, trazabilidad y sistemas HACCP, con respaldo en cada inspección y auditoría.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/industria-hero.png",
 };
 
 export const problemSection = {
-  title: "Las soluciones técnicas que tu industria necesita para avanzar",
+  title: "¿Perdés el rastro de tus lotes o te frenan los lanzamientos?",
   subtitle: "Muchos emprendedores se encuentran con:",
   cards: [
     { icon: "package" as const, text: "Pérdida de rastro en lotes productivos" },
@@ -20,8 +20,8 @@ export const problemSection = {
 };
 
 export const featureSplitSection = {
-  title: "Nos encargamos de todo el proceso por vos",
-  subtitle: "En InoQua te acompañamos desde la evaluación inicial hasta la aprobación final.",
+  title: "Ordenamos el control técnico de tu planta de alimentos",
+  subtitle: "Control de materias primas, trazabilidad, manuales a medida y respaldo en auditorías.",
   items: [
     "Control estricto de tus materias primas",
     "Optimización de tiempos ante organismos oficiales",
@@ -35,7 +35,7 @@ export const featureSplitSection = {
 
 export const differentiatorSection = {
   eyebrow: "NUESTRO DIFERENCIAL",
-  title: 'No trabajamos solo para "presentar papeles"',
+  title: '¿Las inspecciones regulatorias te generan incertidumbre?',
   cards: [
     {
       icon: "building" as const,
@@ -58,7 +58,7 @@ export const differentiatorSection = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo trabajamos el cumplimiento de tu industria?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   closingText: "Más que una solución puntual, somos tu aliado estratégico",
   steps: [
@@ -70,7 +70,7 @@ export const processStepsSection = {
 };
 
 export const finalCtaContent = {
-  title: "Mejorá el control sanitario de tu planta de alimentos",
+  title: "¿Necesitás habilitar tu planta o implementar HACCP?",
   subtitleRegular: "Asegurá tus estándares con nuestra representación técnica. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },

@@ -50,7 +50,7 @@ export default function HowWeWork({ eyebrow, title, subtitle, closingText, steps
   return (
     <section className="bg-azul py-12">
       <div className="mx-auto max-w-content px-6 sm:px-10 lg:px-20">
-        <Reveal className="text-center">
+        <Reveal className="text-left md:text-center">
           <span className="text-[13px] font-normal tracking-[1.2px] text-naranja">{eyebrow}</span>
           <h2 className="mt-2 text-titulo-xxl text-white">{title}</h2>
           <p className="mt-3 text-subtitulo-xxl text-white">{subtitle}</p>
@@ -65,7 +65,7 @@ export default function HowWeWork({ eyebrow, title, subtitle, closingText, steps
         </div>
 
         <Reveal delay={400}>
-          <p className="mx-auto mt-2 max-w-4xl text-center text-parrafo-20 text-naranja">
+          <p className="mt-2 w-full max-w-4xl text-left text-parrafo-20 text-naranja md:mx-auto md:text-center">
             {closingText}
           </p>
         </Reveal>

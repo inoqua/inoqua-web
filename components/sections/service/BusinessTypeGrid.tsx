@@ -22,8 +22,8 @@ export default function BusinessTypeGrid({ title, chips }: BusinessTypeGridProps
 
   return (
     <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
-      <Reveal className="text-center">
-        <h2 className="mx-auto max-w-3xl text-subtitulo-35-sm sm:text-subtitulo-35 text-azul">{title}</h2>
+      <Reveal className="text-left md:text-center">
+        <h2 className="mx-0 w-full max-w-3xl text-subtitulo-35-sm sm:text-subtitulo-35 text-azul md:mx-auto">{title}</h2>
       </Reveal>
 
       <div className="mt-10 flex flex-wrap justify-center gap-4">

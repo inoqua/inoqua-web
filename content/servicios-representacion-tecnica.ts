@@ -3,9 +3,9 @@
 
 export const serviceHeroContent = {
   breadcrumb: "Servicios — Representación técnica",
-  title: "Tu negocio siempre en regla, sin riesgos ni sorpresas",
+  title: "Representante técnico bromatológico para empresas alimentarias",
   subtitle:
-    "Asumimos la representación técnica de tu empresa alimentaria para que cumplas con la normativa, superes inspecciones sin problemas y operes con total tranquilidad.",
+    "¿Tu empresa opera sin representante técnico? Asumimos la representación ante el SRA y Bromatología: cumplimiento normativo, respaldo en inspecciones y seguimiento permanente.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/representacionTecnica-hero.png",
@@ -29,7 +29,7 @@ export const alertBannerText =
 export const featureSplitSection = {
   title: "Respaldo profesional para una operación sin fallas",
   subtitle:
-    "En InoQua asumimos la representación técnica de tu empresa para que siempre operes con respaldo profesional.",
+    "Supervisamos tu cumplimiento bromatológico todos los días, no solo cuando llega la inspección.",
   items: [
     "Supervisar el cumplimiento bromatológico",
     "Mantener tu documentación actualizada",
@@ -44,7 +44,7 @@ export const featureSplitSection = {
 
 export const differentiatorSection = {
   eyebrow: "NUESTRO DIFERENCIAL",
-  title: "Más que firmantes, somos un respaldo técnico real",
+  title: "¿Tu representante técnico solo firma y desaparece?",
   cards: [
     {
       icon: "close" as const,
@@ -71,8 +71,7 @@ export const differentiatorSection = {
 };
 
 export const audienceSection = {
-  title: "Para quién es este servicio",
-  subtitle: "Trabajamos con empresas que manipulan alimentos en cualquier escala.",
+  title: "¿Quién necesita un representante técnico ante Bromatología?",
   cards: [
     { icon: "fork" as const, text: "Tenés un local gastronómico en funcionamiento" },
     { icon: "shield" as const, text: "Estás habilitado pero no tenés seguimiento técnico" },

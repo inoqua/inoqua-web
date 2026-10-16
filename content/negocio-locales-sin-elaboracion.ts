@@ -1,15 +1,15 @@
 export const heroContent = {
   breadcrumb: "Tipo de negocio — Locales sin elaboración",
-  title: "Habilitá tu comercio de alimentos sin complicaciones",
+  title: "Habilitación bromatológica de kioscos, almacenes y comercios de alimentos",
   subtitle:
-    "Garantizá el cumplimiento de las normativas municipales y sanitarias vigentes con el respaldo de nuestro equipo técnico.",
+    "¿Vas a abrir un comercio de alimentos envasados? Gestionamos tu habilitación comercial cumpliendo la normativa municipal y sanitaria, sin reformas ni gastos innecesarios.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/localesSinElaboracion-hero.png",
 };
 
 export const problemSection = {
-  title: "Las soluciones técnicas que tu comercio necesita para avanzar",
+  title: "¿Te frenaron la apertura de tu comercio por exigencias inesperadas?",
   subtitle: "Muchos emprendedores se encuentran con:",
   cards: [
     { icon: "building" as const, text: "Reformas y obras innecesarias" },
@@ -20,8 +20,8 @@ export const problemSection = {
 };
 
 export const featureSplitSection = {
-  title: "Nos encargamos de todo el proceso por vos",
-  subtitle: "En InoQua te acompañamos desde la evaluación inicial hasta la aprobación final.",
+  title: "Gestionamos la habilitación comercial de tu negocio",
+  subtitle: "Identificamos los requisitos reales antes de que gastes en obras que no correspondían.",
   items: [
     "Habilitación comercial rápida de tu nuevo local",
     "Identificación de los requisitos para prevenir gastos excesivos en reformas de obra",
@@ -35,7 +35,7 @@ export const featureSplitSection = {
 
 export const differentiatorSection = {
   eyebrow: "NUESTRO DIFERENCIAL",
-  title: 'No trabajamos solo para "presentar papeles"',
+  title: '¿Necesitás abrir rápido y sin gastar de más?',
   cards: [
     {
       icon: "money" as const,
@@ -57,7 +57,7 @@ export const differentiatorSection = {
 };
 
 export const businessTypesGrid = {
-  title: "Para quién es este servicio",
+  title: "¿Qué comercios habilitamos?",
   chips: [
     { icon: "building" as const, label: "Kioscos" },
     { icon: "shoppingBasket" as const, label: "Almacenes" },
@@ -68,7 +68,7 @@ export const businessTypesGrid = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo es el proceso de habilitación paso a paso?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   closingText: "Más que una solución puntual, somos tu aliado estratégico",
   steps: [
@@ -80,8 +80,8 @@ export const processStepsSection = {
 };
 
 export const finalCtaContent = {
-  title: "Llevá la gestión técnica de tu comercio al día",
-  subtitleRegular: "Asegurá tu aprobación oficial con nuestro respaldo. ",
+  title: "¿Necesitás habilitar tu kiosco, almacén o comercio de alimentos?",
+  subtitleRegular: "Te acompañamos en toda la habilitación de tu local comercial.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
   image: "/img/negocio-cta3.png",

@@ -6,17 +6,17 @@
 // que reemplaces cada una por tu foto real. Ver README.md para instrucciones.
 
 export const heroContent = {
-  title: "Impulsá tu empresa de alimentos con seguridad y respaldo técnico",
+  title: "Consultoría alimentaria en Uruguay para habilitar y hacer crecer tu empresa de alimentos",
   subtitle:
-    "Somos una consultora especializada en el área alimentaria, enfocada en acompañar a empresas en sus procesos de habilitación, cumplimiento normativo y gestión técnica.",
+    "¿Necesitás habilitar tu empresa alimentaria? Te acompañamos en todo el proceso: habilitaciones bromatológicas, representación técnica, registro de productos y certificaciones de inocuidad.",
   imageLabel: "Foto hero",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
 };
 
 export const servicesSection = {
-  title: "Nuestros servicios",
-  subtitle: "Soluciones integrales para empresas del sector alimentario",
+  title: "Servicios de consultoría alimentaria",
+  subtitle: "Habilitación bromatológica, representación técnica, registro de alimentos y capacitaciones.",
   cards: [
     {
       icon: "clipboard" as const,
@@ -46,8 +46,8 @@ export const servicesSection = {
 };
 
 export const processSection = {
-  title: "Nos encargamos de todo el proceso por vos",
-  subtitle: "En InoQua te acompañamos desde la evaluación inicial hasta la aprobación final.",
+  title: "¿Vas a habilitar tu empresa y no sabés por dónde empezar?",
+  subtitle: "Nos encargamos del proceso completo, desde el diagnóstico inicial hasta la aprobación.",
   imageLabel: "Foto del proceso",
   items: [
     "Evaluación completa del local",
@@ -61,8 +61,8 @@ export const processSection = {
 
 export const howWeWorkSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Cómo trabajamos",
-  subtitle: "Empleamos un método claro y sin sorpresas.",
+  title: "¿Cómo es trabajar con nosotros?",
+  subtitle: "Un proceso claro, sin sorpresas y con plazos que se cumplen.",
   closingText:
     "Trabajamos con un enfoque práctico, orientado a resolver problemas reales y asegurar que cada negocio pueda operar de forma segura y en regla",
   steps: [
@@ -74,8 +74,8 @@ export const howWeWorkSection = {
 };
 
 export const businessTypesSection = {
-  title: "Trabajamos con distintos tipos de negocios",
-  subtitle: "Cada rubro tiene su normativa y sus particularidades.",
+  title: "Habilitación de empresas alimentarias según tu rubro",
+  subtitle: "Cada actividad tiene su normativa, su organismo y sus tiempos.",
   cards: [
     { label: "Restaurantes y gastronomía", href: "/tipo-de-negocio/locales-gastronomicos", image: "/img/home-negocio-restaurante.png" },
     { label: "Kioscos y almacenes", href: "/tipo-de-negocio/locales-sin-elaboracion", image: "/img/home-negocio-kiosco.png" },
@@ -87,8 +87,8 @@ export const businessTypesSection = {
 };
 
 export const finalCtaSection = {
-  title: "El problema no es el trámite, sino la falta de respaldo técnico para enfrentarlo",
-  subtitleRegular: "Un error puede costarte tiempo, dinero o incluso tu negocio. ",
+  title: "¿Vas a abrir un negocio de alimentos o te observaron en una inspección?",
+  subtitleRegular: "Te acompañamos en la habilitación de tu empresa alimentaria.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
   image: "/img/home_cta.png",

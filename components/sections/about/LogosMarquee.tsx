@@ -21,7 +21,7 @@ export default function LogosMarquee({ title, subtitle, logos }: LogosMarqueePro
 
   return (
     <section className="mx-auto max-w-content px-6 py-12 sm:px-10 lg:px-20">
-      <Reveal className="text-center">
+      <Reveal className="text-left md:text-center">
         <h2 className="text-titulo-xxl text-azul">{title}</h2>
         <p className="mx-auto mt-3 max-w-2xl text-subtitulo-xxl text-texto">{subtitle}</p>
       </Reveal>

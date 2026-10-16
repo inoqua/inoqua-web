@@ -2,7 +2,7 @@ export const heroContent = {
   breadcrumb: "Servicios — Registro de productos",
   title: "Registrá tus productos y comercializalos legalmente en Uruguay",
   subtitle:
-    "Te acompañamos en todo el proceso de registro ante los organismos competentes para que puedas comercializar tus productos de forma segura, cumpliendo con la normativa vigente.",
+    "¿Necesitás registrar un producto? Gestionamos el trámite ante los organismos competentes y revisamos tu etiqueta completa para que salgas al mercado sin observaciones.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
   image: "/img/registroProductos-hero.png",
@@ -24,7 +24,7 @@ export const categoriesSection = {
 };
 
 export const problemSection = {
-  title: "¿Querés vender un producto y no sabés qué requisitos cumplir?",
+  title: "¿Querés vender un producto y no sabés qué registros y qué rótulo necesitás?",
   subtitle: "Muchos fabricantes, importadores y emprendedores se encuentran con:",
   cards: [
     { icon: "package" as const, text: "Requisitos técnicos complejos" },
@@ -40,9 +40,9 @@ export const alertBannerText =
   "Un error en el registro puede costarte tiempo, dinero y oportunidades comerciales";
 
 export const featureSplitSection = {
-  title: "Nosotros nos encargamos del proceso",
+  title: "Nos encargamos del registro de tus productos y de tus rótulos",
   subtitle:
-    "En InoQua gestionamos registros de productos alimentarios para consumo humano y alimentación animal.",
+    " Evaluación regulatoria, revisión técnica de la etiqueta y gestión completa del expediente.",
   items: [
     "Evaluación regulatoria",
     "Revisión técnica de etiquetas",
@@ -58,7 +58,7 @@ export const featureSplitSection = {
 
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
-  title: "Un proceso claro y profesional",
+  title: "¿Cómo es el proceso de registro paso a paso?",
   subtitle: "Empleamos un método claro y sin sorpresas.",
   steps: [
     { number: 1, title: "Evaluación", text: "Analizamos el producto y determinamos los requisitos aplicables." },
@@ -71,7 +71,7 @@ export const processStepsSection = {
 
 export const differentiatorSection = {
   eyebrow: "NUESTRO DIFERENCIAL",
-  title: "¿Por qué elegir InoQua?",
+  title: "¿Por qué elegir InoQua para registrar tus alimentos?",
   cards: [
     {
       icon: "building" as const,
@@ -108,7 +108,7 @@ export const differentiatorSection = {
 };
 
 export const businessTypesGrid = {
-  title: "¿Quiénes suelen contratar este servicio?",
+  title: "¿Quiénes registran productos alimentarios?",
   chips: [
     { icon: "fork" as const, label: "Industrias alimentarias" },
     { icon: "package" as const, label: "Importadores de alimentos" },
