@@ -72,6 +72,7 @@ export const differentiatorSection = {
 
 export const audienceSection = {
   title: "¿Quién necesita un representante técnico ante Bromatología?",
+  subtitle: "Acompañamos a empresas alimentarias que necesitan respaldo técnico para operar en regla.",
   cards: [
     { icon: "fork" as const, text: "Tenés un local gastronómico en funcionamiento" },
     { icon: "shield" as const, text: "Estás habilitado pero no tenés seguimiento técnico" },

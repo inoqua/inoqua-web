@@ -75,6 +75,7 @@ export const audienceSection = {
 export const processStepsSection = {
   eyebrow: "NUESTRO MÉTODO",
   title: "¿Cómo implementamos tu plan de capacitación?",
+  subtitle: "Un proceso práctico para fortalecer las buenas prácticas y reducir riesgos en el manejo de alimentos.",
   subTitleMaxWidth: "43rem",
   steps: [
     { number: 1, title: "Diagnóstico", text: "Evaluamos el nivel actual de tu equipo." },
