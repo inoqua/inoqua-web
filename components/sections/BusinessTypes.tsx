@@ -15,6 +15,7 @@ function BusinessCardItem({ card }: { card: BusinessCard }) {
   return (
     <Link
       href={card.href}
+      prefetch={false}
       className="group relative block h-[220px] w-full overflow-hidden rounded-pill"
     >
       <Image

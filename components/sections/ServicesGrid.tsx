@@ -14,6 +14,7 @@ export function ServiceCard({ icon, title, text, href }: ServiceCardProps) {
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex h-70 lg:h-82 xl:h-75 w-full flex-col rounded-card bg-azul p-7 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
     >
       {/* Acento de color en vez del ícono de Figma — reemplazá por tu ícono real si querés */}

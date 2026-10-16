@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Gestionás un espacio con varios operadores gastronómicos? Coordinamos la habilitación de todos los locales y estandarizamos los protocolos sanitarios de las áreas comunes.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/espaciosColectivos-hero.png",
+  image: "/img/espaciosColectivos-hero.webp",
 };
 
 export const problemSection = {
@@ -30,7 +30,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/espaciosGastronomicos-solucion.png",
+  image: "/img/espaciosGastronomicos-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -74,5 +74,5 @@ export const finalCtaContent = {
   subtitleRegular: "Te acompañamos en las auditorías preventivas de cada local.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/espaciosColectivos-hero.png",
+  image: "/img/espaciosColectivos-hero.webp",
 };

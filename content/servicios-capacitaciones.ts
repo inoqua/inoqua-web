@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Tu equipo manipula alimentos sin formación? Capacitamos en Buenas Prácticas de Manufactura, manipulación segura y prevención de contaminación cruzada, con contenidos adaptados a tu rubro.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/capacitaciones-hero.png",
+  image: "/img/capacitaciones-hero.webp",
 };
 
 export const problemSection = {
@@ -35,7 +35,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/capacitaciones-solucion.png",
+  image: "/img/capacitaciones-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -90,6 +90,6 @@ export const finalCtaContent = {
   subtitleRegular: "Te acompañamos en la implementación de BPM en tu empresa.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/servicios-cta3.png",
+  image: "/img/servicios-cta3.webp",
   titleMaxWidth: "37rem",
 };

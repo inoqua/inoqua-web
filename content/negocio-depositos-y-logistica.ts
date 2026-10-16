@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Almacenás o distribuís alimentos? Habilitamos tu depósito, tu importadora y tus vehículos cumpliendo la normativa de almacenamiento, cadena de frío y trazabilidad.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/deposito-hero.png",
+  image: "/img/deposito-hero.webp",
 };
 
 export const problemSection = {
@@ -30,7 +30,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/depositosLogistica-solucion.png",
+  image: "/img/depositosLogistica-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -74,5 +74,5 @@ export const finalCtaContent = {
   subtitleRegular: "Te acompañamos en la habilitación del depósito de alimentos.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/negocio-cta5.png",
+  image: "/img/negocio-cta5.webp",
 };

@@ -37,7 +37,7 @@ export default function ProcessChecklist({ title, subtitle, imageLabel, items, b
         </Reveal>
 
         <Reveal delay={150} className="relative mx-auto h-[400px] w-full max-w-[450px] overflow-hidden rounded-panel">
-          <Image src="/img/home-solution.png" alt={imageLabel} fill sizes="(max-width: 1024px) 80vw, 526px" className="object-cover" />
+          <Image src="/img/home-solution.webp" alt={imageLabel} fill sizes="(max-width: 1024px) 80vw, 526px" className="object-cover" />
         </Reveal>
       </div>
     </section>

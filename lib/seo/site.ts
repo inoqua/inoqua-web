@@ -21,6 +21,5 @@ export const site = {
     instagram: "https://www.instagram.com/inoqua.consultora/",
     linkedin: "https://www.linkedin.com/company/inoqua-uy",
   },
-  defaultOgImage: "/img/home1.jpg",
+  defaultOgImage: "/img/home1.webp",
 } as const;
-

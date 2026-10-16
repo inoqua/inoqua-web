@@ -41,7 +41,7 @@ export default function WhyChooseUs({ title, subtitle, items, imagePosition = "l
           delay={150}
           className={`relative mx-auto h-[400px] w-full max-w-[492px] overflow-hidden rounded-panel ${imageOrderClass}`}
         >
-          <Image src="/img/registroProductos-solucion.png" alt={title} fill sizes="(max-width: 1024px) 90vw, 492px" className="object-cover" />
+          <Image src="/img/registroProductos-solucion.webp" alt={title} fill sizes="(max-width: 1024px) 90vw, 492px" className="object-cover" />
         </Reveal>
       </div>
     </section>

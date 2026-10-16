@@ -52,7 +52,7 @@ components/
 public/
   img/
     logo.png             -> logo real de la marca
-    home1.jpg             -> foto real (fábrica/producto) usada en todas las landings
+    home1.webp            -> foto general usada como imagen por defecto
 ```
 
 ### ¿Por qué algunas carpetas son distintas y otras se comparten?
@@ -94,20 +94,17 @@ componente.
 
 ## Imágenes
 
-Reemplacé todas las imágenes de Figma por tu foto real (`public/img/home1.jpg`) en todas las
-landings: hero, secciones de proceso/checklist, tarjetas de tipo de negocio y banner final. Si más
-adelante querés una foto distinta para cada bloque, guardá el archivo en `public/img/` y cambiá el
-`src="/img/..."` en el componente correspondiente.
+Las fotos de las páginas se guardan en `public/img/` en formato WebP optimizado. Las imágenes se
+muestran con `next/image`; Next genera AVIF cuando el navegador lo admite y WebP como alternativa.
+Para sumar una foto, preferí WebP de hasta 200 KB y ajustá su `sizes` al ancho real del componente.
 
-**Foto del hero por landing**: hoy todos los heros comparten la misma foto porque es la única real
-que tenemos. El componente ya está preparado para que cada landing tenga la suya propia sin tocar
-código: `Hero` y `ServiceHero` aceptan una prop opcional `image` (si no se pasa, cae en
-`/img/home1.jpg` por defecto). Cuando tengas fotos específicas por rubro, guardalas en `public/img/`
-y agregá una línea así en el `content/*.ts` de esa página:
+**Foto del hero por landing**: `Hero` y `ServiceHero` aceptan una prop opcional `image` (si no se
+pasa, usan `/img/home1.webp`). Para cambiarla, guardá la foto optimizada en `public/img/` y agregá
+una línea así en el `content/*.ts` de esa página:
 ```ts
 export const heroContent = {
   // ...
-  image: "/img/habilitaciones-hero.jpg",
+  image: "/img/habilitaciones-hero.webp",
 };
 ```
 Como la página ya hace `<ServiceHero {...heroContent} />` (spread completo), no hace falta tocar
@@ -264,8 +261,6 @@ Locales sin elaboración, Supermercados, Industria y elaboración, Depósitos y 
 gastronómicas, Espacios colectivos), Nosotros y Contacto.
 
 Pendiente si querés seguir iterando:
-- Reemplazar `public/img/home1.jpg` por fotos reales específicas de cada rubro (hoy todas las
-  landings comparten la misma foto).
 - Conectar `ContactForm` a un backend real (hoy solo valida y muestra un mensaje de confirmación).
 - Revisar/ajustar textos puntuales página por página si algo no refleja 100% tu negocio real.
 Prueba tras migración

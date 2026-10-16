@@ -401,7 +401,7 @@ export default function ContactForm({ title, subtitle, submitLabel }: ContactFor
         </Reveal>
 
         <Reveal delay={150} className="relative mx-auto h-[620px] w-full max-w-[552px] overflow-hidden rounded-panel">
-          <Image src="/img/certificaciones-servicios.png" alt={title} fill sizes="(max-width: 1024px) 90vw, 552px" className="object-cover" />
+          <Image src="/img/certificaciones-servicios.webp" alt={title} fill sizes="(max-width: 1024px) 90vw, 552px" className="object-cover" />
         </Reveal>
       </div>
     </section>

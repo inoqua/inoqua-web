@@ -36,6 +36,6 @@ export const contactFinalCtaContent = {
   title: "Tu tranquilidad normativa empieza con un mensaje",
   subtitleRegular: "No dejes la habilitación de tu empresa al azar.",
   button: { label: "Nuestros servicios", href: "/#servicios", variant: "dark" as const },
-  image: "/img/contacto-cta.png",
+  image: "/img/contacto-cta.webp",
   titleMaxWidth: "28rem",
 };

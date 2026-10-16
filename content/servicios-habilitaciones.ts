@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Necesitás habilitar o renovar tu negocio? Gestionamos tu trámite ante el SRA y tu registro en RUNAEV, desde la evaluación del local hasta la aprobación del expediente.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/habilitaciones-hero.jpg",
+  image: "/img/habilitaciones-hero.webp",
 };
 
 export const problemSection = {
@@ -36,7 +36,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/abilitaciones-solucion.png",
+  image: "/img/abilitaciones-solucion.webp",
 };
 
 
@@ -108,5 +108,5 @@ export const finalCtaContent = {
   subtitleRegular: "Te acompañamos en la habilitación de tu empresa alimentaria.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/servicios-cta1.png",
+  image: "/img/servicios-cta1.webp",
 };

@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Vas a abrir un local gastronómico? Gestionamos el trámite bromatológico de tu restaurante, rotisería, panadería o cocina y adaptamos tus procesos a la normativa vigente.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/localesGastronomicos-hero.png",
+  image: "/img/localesGastronomicos-hero.webp",
 };
 
 export const problemSection = {
@@ -30,7 +30,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/localesGastronomicos-solucion.png",
+  image: "/img/localesGastronomicos-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -97,5 +97,5 @@ export const finalCtaContent = {
   subtitleRegular: "Asegurá tu aprobación oficial con nuestro respaldo. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/servicios-cta5.png",
+  image: "/img/servicios-cta5.webp",
 };

@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Estás organizando una feria gastronómica? Gestionamos los requisitos bromatológicos del evento: permisos, coordinación de elaboradores y verificación sanitaria antes y durante.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/ferias-hero.png",
+  image: "/img/ferias-hero.webp",
 };
 
 export const problemSection = {
@@ -33,7 +33,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/ferias-solucion.png",
+  image: "/img/ferias-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -95,5 +95,5 @@ export const finalCtaContent = {
   subtitleRegular:
     "Planificá correctamente desde el inicio y evitá problemas cuando el evento ya esté en marcha.",
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
-  image: "/img/negocio-cta4.png",
+  image: "/img/negocio-cta4.webp",
 };

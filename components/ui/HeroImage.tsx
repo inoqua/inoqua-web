@@ -6,7 +6,7 @@ type HeroImageProps = {
   /**
    * Foto a mostrar en el hero. Por defecto usa la foto genérica del sitio.
    * Cuando tengas una foto real y específica para esta landing, pasala acá
-   * (ej: image="/img/habilitaciones-hero.jpg") sin tocar el resto del componente.
+   * (ej: image="/img/habilitaciones-hero.webp") sin tocar el resto del componente.
    */
   image?: string;
 };
@@ -18,7 +18,7 @@ type HeroImageProps = {
  * El triángulo apunta hacia la izquierda: su base (el lado recto) queda apoyada
  * sobre el margen derecho de la columna, y el pico se mete por detrás de la foto.
  */
-export default function HeroImage({ alt, className = "", image = "/img/home1.jpg" }: HeroImageProps) {
+export default function HeroImage({ alt, className = "", image = "/img/home1.webp" }: HeroImageProps) {
   return (
     <div className={`relative mx-auto hidden lg:flex h-70 w-full items-center justify-center animate-fadeIn lg:h-[360px] ${className}`}>
       {/* Triángulo naranja: base pegada al margen derecho, pico hacia la izquierda */}
@@ -38,7 +38,6 @@ export default function HeroImage({ alt, className = "", image = "/img/home1.jpg
           fill
           sizes="(max-width: 1024px) 90vw, 448px"
           className="object-cover"
-          priority
         />
       </div>
     </div>

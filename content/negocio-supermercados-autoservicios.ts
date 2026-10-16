@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Vas a abrir un autoservicio o te observaron un sector? Coordinamos la habilitación integral de tu supermercado: control sanitario por área, cadena de frío y registros obligatorios.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/supermercados-hero.png",
+  image: "/img/supermercados-hero.webp",
 };
 
 export const problemSection = {
@@ -30,7 +30,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/supermercados-solucion.png",
+  image: "/img/supermercados-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -74,5 +74,5 @@ export const finalCtaContent = {
   subtitleRegular: "Te acompañamos en las auditorías internas de cada área crítica.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/supermercados-hero.png",
+  image: "/img/supermercados-hero.webp",
 };

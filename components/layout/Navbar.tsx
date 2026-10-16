@@ -73,6 +73,7 @@ function NavDropdown({ label, items, pathname }: { label: string; items: LinkIte
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 className={`block rounded-lg px-4 py-2 text-[14px] transition-colors hover:bg-azul/5 ${
                   isActive ? "font-semibold text-naranja" : "text-azul"
                 }`}
@@ -137,6 +138,7 @@ function MobileNavDropdown({
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 onClick={onNavigate}
                 className={`text-[15px] transition-colors ${
                   isActive ? "font-semibold text-naranja" : "text-azul/80"

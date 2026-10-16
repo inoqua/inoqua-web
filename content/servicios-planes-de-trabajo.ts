@@ -5,7 +5,7 @@ export const heroContent = {
     "Diseñamos diferentes niveles de acompañamiento técnico adaptados al riesgo y complejidad de cada empresa, asegurando el respaldo normativo adecuado.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/planesTrabajo-hero.png",
+  image: "/img/planesTrabajo-hero.webp",
 };
 
 export const pricingSection = {
@@ -57,5 +57,5 @@ export const finalCtaContent = {
   subtitleRegular: "Analizamos las necesidades específicas de tu empresa. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/servicios-cta2.png",
+  image: "/img/servicios-cta2.webp",
 };

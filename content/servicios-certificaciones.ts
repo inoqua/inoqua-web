@@ -7,7 +7,7 @@ export const heroContent = {
     "¿Un cliente o una licitación te exige certificar? Implementamos sistemas de gestión de inocuidad alimentaria y calidad —HACCP, ISO 22000, ISO 9001 e ISO 27001— hasta la auditoría externa.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/certificaciones-hero.png",
+  image: "/img/certificaciones-hero.webp",
 };
 
 export const problemSection = {
@@ -36,7 +36,7 @@ export const strategicSupportSection = {
     "En InoQua acompañamos a las organizaciones en el diseño, implementación y mejora de sistemas de gestión alineados con estándares internacionales. Trabajamos con cada equipo para que la certificación no sea un trámite aislado, sino parte natural de cómo opera la empresa.",
     "No solo somos consultores, somos tu respaldo técnico permanente.",
   ],
-  image: "/img/certificaciones-solucion.png",
+  image: "/img/certificaciones-solucion.webp",
   imagePosition: "left" as const,
 };
 
@@ -86,7 +86,7 @@ export const servicesIncludedSection = {
     "Acompañamiento durante auditorías externas",
   ],
   imagePosition: "right" as const,
-  image: "/img/certificaciones-servicios.png",
+  image: "/img/certificaciones-servicios.webp",
 };
 
 export const businessTypesGrid = {
@@ -105,5 +105,5 @@ export const finalCtaContent = {
   subtitleRegular:
     "Te acompañamos en la implementación de HACCP e ISO 22000 en Uruguay para que llegues sin desvíos a la certificación.",
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
-  image: "/img/servicios-cta5.png",
+  image: "/img/servicios-cta5.webp",
 };

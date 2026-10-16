@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Vas a abrir un comercio de alimentos envasados? Gestionamos tu habilitación comercial cumpliendo la normativa municipal y sanitaria, sin reformas ni gastos innecesarios.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/localesSinElaboracion-hero.png",
+  image: "/img/localesSinElaboracion-hero.webp",
 };
 
 export const problemSection = {
@@ -30,7 +30,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/localesSinElaboracion-solucion.png",
+  image: "/img/localesSinElaboracion-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -84,5 +84,5 @@ export const finalCtaContent = {
   subtitleRegular: "Te acompañamos en toda la habilitación de tu local comercial.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/negocio-cta3.png",
+  image: "/img/negocio-cta3.webp",
 };

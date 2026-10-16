@@ -63,7 +63,7 @@ export default function ContactHero({ title, subtitle, cards }: ContactHeroProps
   return (
     <section className="relative overflow-hidden px-6 py-12 sm:px-10 lg:px-20">
       <Parallax className="absolute inset-x-0 -inset-y-[15%]">
-        <Image src="/img/negocio-cta3.png" alt="" fill className="object-cover" />
+        <Image src="/img/negocio-cta3.webp" alt="" fill sizes="100vw" className="object-cover" />
       </Parallax>
 
       <Reveal className="relative mx-auto flex w-full max-w-6xl flex-col items-stretch rounded-final bg-white/85 px-10 py-14 text-left shadow-lg backdrop-blur-sm md:items-center md:text-center">

@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Elaborás alimentos a escala industrial? Te acompañamos en habilitaciones, registro de productos, trazabilidad y sistemas HACCP, con respaldo en cada inspección y auditoría.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/industria-hero.png",
+  image: "/img/industria-hero.webp",
 };
 
 export const problemSection = {
@@ -30,7 +30,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/industria-solucion.png",
+  image: "/img/industria-solucion.webp",
 };
 
 export const differentiatorSection = {
@@ -74,5 +74,5 @@ export const finalCtaContent = {
   subtitleRegular: "Asegurá tus estándares con nuestra representación técnica. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/servicios-cta3.png",
+  image: "/img/servicios-cta3.webp",
 };

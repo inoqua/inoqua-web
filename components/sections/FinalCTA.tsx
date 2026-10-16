@@ -32,13 +32,13 @@ export default function FinalCTA({
   button,
   secondaryButton,
   ctaContainerClassName = "",
-  image = "/img/home1.jpg",
+  image = "/img/home1.webp",
   titleMaxWidth = "36rem",
 }: FinalCTAProps) {
   return (
     <section className="relative flex min-h-[420px] items-center justify-center overflow-hidden px-6 py-12 sm:px-10 lg:px-20">
       <Parallax className="absolute inset-x-0 -inset-y-[20%]">
-        <Image src={image} alt="" fill className="object-cover" />
+        <Image src={image} alt="" fill sizes="100vw" className="object-cover" />
       </Parallax>
       <div className="absolute inset-0 bg-azul/20" />
 

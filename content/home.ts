@@ -77,12 +77,12 @@ export const businessTypesSection = {
   title: "Habilitación de empresas alimentarias según tu rubro",
   subtitle: "Cada actividad tiene su normativa, su organismo y sus tiempos.",
   cards: [
-    { label: "Restaurantes y gastronomía", href: "/tipo-de-negocio/locales-gastronomicos", image: "/img/home-negocio-restaurante.png" },
-    { label: "Kioscos y almacenes", href: "/tipo-de-negocio/locales-sin-elaboracion", image: "/img/home-negocio-kiosco.png" },
-    { label: "Supermercados", href: "/tipo-de-negocio/supermercados-autoservicios", image: "/img/supermercados-hero.png" },
-    { label: "Industrias alimentarias", href: "/tipo-de-negocio/industria-y-elaboracion", image: "/img/home-negocio-industria.png" },
-    { label: "Depósitos y logística", href: "/tipo-de-negocio/depositos-y-logistica", image: "/img/deposito-hero.png" },
-    { label: "Espacios colectivos", href: "/tipo-de-negocio/espacios-gastronomicos-colectivos", image: "/img/espaciosColectivos-hero.png" },
+    { label: "Restaurantes y gastronomía", href: "/tipo-de-negocio/locales-gastronomicos", image: "/img/home-negocio-restaurante.webp" },
+    { label: "Kioscos y almacenes", href: "/tipo-de-negocio/locales-sin-elaboracion", image: "/img/home-negocio-kiosco.webp" },
+    { label: "Supermercados", href: "/tipo-de-negocio/supermercados-autoservicios", image: "/img/supermercados-hero.webp" },
+    { label: "Industrias alimentarias", href: "/tipo-de-negocio/industria-y-elaboracion", image: "/img/home-negocio-industria.webp" },
+    { label: "Depósitos y logística", href: "/tipo-de-negocio/depositos-y-logistica", image: "/img/deposito-hero.webp" },
+    { label: "Espacios colectivos", href: "/tipo-de-negocio/espacios-gastronomicos-colectivos", image: "/img/espaciosColectivos-hero.webp" },
   ],
 };
 
@@ -91,5 +91,5 @@ export const finalCtaSection = {
   subtitleRegular: "Te acompañamos en la habilitación de tu empresa alimentaria.",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/home_cta.png",
+  image: "/img/home_cta.webp",
 };

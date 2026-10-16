@@ -8,7 +8,7 @@ export const serviceHeroContent = {
     "¿Tu empresa opera sin representante técnico? Asumimos la representación ante el SRA y Bromatología: cumplimiento normativo, respaldo en inspecciones y seguimiento permanente.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/representacionTecnica-hero.png",
+  image: "/img/representacionTecnica-hero.webp",
 };
 
 export const problemSection = {
@@ -39,7 +39,7 @@ export const featureSplitSection = {
   ],
   button: { label: "Solicitar asesoramiento", href: "/contacto" },
   imagePosition: "left" as const,
-  image: "/img/representacionTecnica-solucion2.png",
+  image: "/img/representacionTecnica-solucion2.webp",
 };
 
 export const differentiatorSection = {
@@ -100,5 +100,5 @@ export const finalCtaContent = {
   subtitleRegular: "Protegé tu negocio todos los días de multas y clausuras. ",
   subtitleBold: "Evaluamos tu caso sin compromiso.",
   button: { label: "Evaluar mi caso", href: "/contacto" },
-  image: "/img/servicios-cta3.png",
+  image: "/img/servicios-cta3.webp",
 };

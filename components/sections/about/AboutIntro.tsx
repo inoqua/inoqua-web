@@ -23,7 +23,7 @@ type AboutIntroProps = {
 export default function AboutIntro({
   title,
   paragraphs,
-  image = "/img/nosotros-about.png",
+  image = "/img/nosotros-about.webp",
   imagePosition = "right",
   button,
   spacingClassName = "py-12",

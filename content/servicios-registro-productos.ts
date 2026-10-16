@@ -5,7 +5,7 @@ export const heroContent = {
     "¿Necesitás registrar un producto? Gestionamos el trámite ante los organismos competentes y revisamos tu etiqueta completa para que salgas al mercado sin observaciones.",
   primaryButton: { label: "Solicitar asesoramiento", href: "/contacto" },
   secondaryButton: { label: "Hablar por Whatsapp", href: "https://wa.me/59899286804" },
-  image: "/img/registroProductos-hero.png",
+  image: "/img/registroProductos-hero.webp",
 };
 
 export const categoriesSection = {
@@ -53,7 +53,7 @@ export const featureSplitSection = {
     "Acompañamiento hasta la aprobación",
   ],
   imagePosition: "right" as const,
-  image: "/img/registroProductos-solucion.png",
+  image: "/img/registroProductos-solucion.webp",
 };
 
 export const processStepsSection = {
@@ -126,5 +126,5 @@ export const finalCtaContent = {
   subtitleRegular:
     "Evaluamos tu caso y te indicamos exactamente qué registros necesitás para comercializarlo de forma legal.",
   button: { label: "Solicitar asesoramiento", href: "/contacto", variant: "solid" as const },
-  image: "/img/servicios-cta4.png",
+  image: "/img/servicios-cta4.webp",
 };
